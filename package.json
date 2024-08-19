@@ -1,0 +1,25 @@
+{
+    "name": "sainsorsciencebot",
+    "version": "0.0.1",
+    "description": "A bot whom provides science quizzes from Malaysia's secondary schools with both Malay and English support.",
+    "main": "src/index.ts",
+    "scripts": {
+        "test": "nodemon ."
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/haydenykh/sosbot.git"
+    },
+    "keywords": [
+        "discord",
+        "sains",
+        "science",
+        "bot"
+    ],
+    "author": "HaydenYKH",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/haydenykh/sosbot/issues"
+    },
+    "homepage": "https://github.com/haydenykh/sosbot#readme"
+}

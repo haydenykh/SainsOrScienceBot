@@ -1,0 +1,242 @@
+{
+    "f1": [
+        {
+            "BI": {
+                "question": "",
+                "choices": [
+                    {
+                        "choice": "",
+                        "isAnswer": true
+                    },
+                    {
+                        "choice": "",
+                        "isAnswer": false
+                    },
+                    {
+                        "choice": "",
+                        "isAnswer": false
+                    },
+                    {
+                        "choice": "",
+                        "isAnswer": false
+                    }
+                ]
+            },
+            "BM": {
+                "question": "",
+                "choices": [
+                    {
+                        "choice": "",
+                        "isAnswer": true
+                    },
+                    {
+                        "choice": "",
+                        "isAnswer": false
+                    },
+                    {
+                        "choice": "",
+                        "isAnswer": false
+                    },
+                    {
+                        "choice": "",
+                        "isAnswer": false
+                    }
+                ]
+            },
+            "difficulty": "",
+            "chapter": ""
+        }
+    ],
+    "f2": [
+        {
+            "BI": {
+                "question": "",
+                "choices": [
+                    {
+                        "choice": "",
+                        "isAnswer": true
+                    },
+                    {
+                        "choice": "",
+                        "isAnswer": false
+                    },
+                    {
+                        "choice": "",
+                        "isAnswer": false
+                    },
+                    {
+                        "choice": "",
+                        "isAnswer": false
+                    }
+                ]
+            },
+            "BM": {
+                "question": "",
+                "choices": [
+                    {
+                        "choice": "",
+                        "isAnswer": true
+                    },
+                    {
+                        "choice": "",
+                        "isAnswer": false
+                    },
+                    {
+                        "choice": "",
+                        "isAnswer": false
+                    },
+                    {
+                        "choice": "",
+                        "isAnswer": false
+                    }
+                ]
+            },
+            "difficulty": "",
+            "chapter": ""
+        }
+    ],
+    "f3": [
+        {
+            "BI": {
+                "question": "What is the definition of stimulus?",
+                "choices": [
+                    {
+                        "choice": "The change in surrounding that can be detected by the body system.",
+                        "isAnswer": true
+                    },
+                    {
+                        "choice": "The organism's action based on the stimulus.",
+                        "isAnswer": false
+                    },
+                    {
+                        "choice": "The change in surrounding that can affect the body system.",
+                        "isAnswer": false
+                    },
+                    {
+                        "choice": "The change in the body system that can be detected by the surroundings.",
+                        "isAnswer": false
+                    }
+                ]
+            },
+            "BM": {
+                "question": "Apakah definisi rangsangan?",
+                "choices": [
+                    {
+                        "choice": "Perubahan persekitaran yang boleh dikesan oleh sistem badan.",
+                        "isAnswer": true
+                    },
+                    {
+                        "choice": "Tindakan organisma terhadap rangsangan tersebut.",
+                        "isAnswer": false
+                    },
+                    {
+                        "choice": "Perubahan persekitaran yang boleh mempengaruhi sistem badan.",
+                        "isAnswer": false
+                    },
+                    {
+                        "choice": "Perubahan sistem badan yang boleh dikesan oleh persekitaran.",
+                        "isAnswer": false
+                    }
+                ]
+            },
+            "difficulty": "R",
+            "chapter": "1"
+        }
+    ],
+    "f4": [
+        {
+            "BI": {
+                "question": "",
+                "choices": [
+                    {
+                        "choice": "",
+                        "isAnswer": true
+                    },
+                    {
+                        "choice": "",
+                        "isAnswer": false
+                    },
+                    {
+                        "choice": "",
+                        "isAnswer": false
+                    },
+                    {
+                        "choice": "",
+                        "isAnswer": false
+                    }
+                ]
+            },
+            "BM": {
+                "question": "",
+                "choices": [
+                    {
+                        "choice": "",
+                        "isAnswer": true
+                    },
+                    {
+                        "choice": "",
+                        "isAnswer": false
+                    },
+                    {
+                        "choice": "",
+                        "isAnswer": false
+                    },
+                    {
+                        "choice": "",
+                        "isAnswer": false
+                    }
+                ]
+            },
+            "difficulty": "",
+            "chapter": ""
+        }
+    ],
+    "f5": [
+        {
+            "BI": {
+                "question": "",
+                "choices": [
+                    {
+                        "choice": "",
+                        "isAnswer": true
+                    },
+                    {
+                        "choice": "",
+                        "isAnswer": false
+                    },
+                    {
+                        "choice": "",
+                        "isAnswer": false
+                    },
+                    {
+                        "choice": "",
+                        "isAnswer": false
+                    }
+                ]
+            },
+            "BM": {
+                "question": "",
+                "choices": [
+                    {
+                        "choice": "",
+                        "isAnswer": true
+                    },
+                    {
+                        "choice": "",
+                        "isAnswer": false
+                    },
+                    {
+                        "choice": "",
+                        "isAnswer": false
+                    },
+                    {
+                        "choice": "",
+                        "isAnswer": false
+                    }
+                ]
+            },
+            "difficulty": "",
+            "chapter": ""
+        }
+    ]
+}
