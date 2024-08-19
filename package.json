@@ -4,11 +4,13 @@
     "description": "A bot whom provides science quizzes from Malaysia's secondary schools with both Malay and English support.",
     "main": "src/index.ts",
     "scripts": {
-        "test": "nodemon ."
+        "test": "nodemon .",
+        "build": "npx tsc",
+        "update": "npm i --package-lock-only"
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/haydenykh/sosbot.git"
+        "url": "git+https://github.com/haydenykh/SainsOrScienceBot.git"
     },
     "keywords": [
         "discord",
@@ -19,7 +21,15 @@
     "author": "HaydenYKH",
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/haydenykh/sosbot/issues"
+        "url": "https://github.com/haydenykh/SainsOrScienceBot/issues"
     },
-    "homepage": "https://github.com/haydenykh/sosbot#readme"
+    "homepage": "https://github.com/haydenykh/SainsOrScienceBot#readme",
+    "devDependencies": {
+        "@types/node": "^22.4.1",
+        "typescript": "^5.5.4"
+    },
+    "dependencies": {
+        "discord.js": "^14.15.3",
+        "dotenv": "^16.4.5"
+    }
 }
