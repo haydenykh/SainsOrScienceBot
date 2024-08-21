@@ -2,10 +2,12 @@
     "name": "sainsorsciencebot",
     "version": "0.0.1",
     "description": "A bot whom provides science quizzes from Malaysia's secondary schools with both Malay and English support.",
-    "main": "src/index.ts",
+    "main": "dist/index.js",
+    "type": "module",
     "scripts": {
-        "test": "nodemon .",
+        "start": "node .",
         "build": "npx tsc",
+        "dev": "npx tsc watch src/index.ts",
         "update": "npm i --package-lock-only"
     },
     "repository": {
@@ -25,10 +27,16 @@
     },
     "homepage": "https://github.com/haydenykh/SainsOrScienceBot#readme",
     "devDependencies": {
+        "@eslint/js": "^9.9.0",
         "@types/node": "^22.4.1",
-        "typescript": "^5.5.4"
+        "eslint": "^9.9.0",
+        "globals": "^15.9.0",
+        "tsx": "^4.17.0",
+        "typescript": "^5.5.4",
+        "typescript-eslint": "^8.1.0"
     },
     "dependencies": {
+        "chalk": "^5.3.0",
         "discord.js": "^14.15.3",
         "dotenv": "^16.4.5"
     }
