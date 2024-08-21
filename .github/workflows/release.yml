@@ -1,45 +1,20 @@
-name: Changelog CI
-
-on:
-    pull_request:
-        types: [opened]
-
-    # Optionally you can use `workflow_dispatch` to run Changelog CI Manually
-    workflow_dispatch:
-        inputs:
-            release_version:
-                description: "Set Release Version"
-                required: true
-
+name: Release
+permissions:
+    contents: read
+    pull-requests: write
+on: workflow_dispatch
 jobs:
-    build:
-        runs-on: ubuntu-latest
-
+    release:
+        runs-on: ubuntu-20.04
         steps:
-            # Checks-out your repository
-            - uses: actions/checkout@v2
-
-            - name: Run Changelog CI
-              uses: saadmk11/changelog-ci@v1.1.2
+            - name: Checkout source code
+              uses: actions/checkout@v4
               with:
-                  # Optional, you can provide any name for your changelog file,
-                  # We currently support Markdown (.md) and reStructuredText (.rst) files
-                  # defaults to `CHANGELOG.md` if not provided.
-                  changelog_filename: CHANGELOG.rst
-                  # Optional, only required when you want more customization
-                  # e.g: group your changelog by labels with custom titles,
-                  # different version prefix, pull request title and version number regex etc.
-                  # config file can be in JSON or YAML format.
-                  config_file: changelog-ci-config.json
-                  # Optional, This will be used to configure git
-                  # defaults to `github-actions[bot]` if not provided.
-                  committer_username: "test"
-                  committer_email: "test@test.com"
-                  # Optional, only required when you want to run Changelog CI
-                  # on an event other than `pull_request` event.
-                  # In this example `release_version` is fetched from `workflow_dispatch` events input.
-                  # You can use any other method to fetch the release version
-                  # such as environment variable or from output of another action
-                  release_version: ${{ github.event.inputs.release_version }}
-                  # Optional
-                  github_token: ${{ secrets.GITHUB_TOKEN }}
+                  token: ${{ secrets.GITHUB_TOKEN }}
+            - name: Install the dependencies
+              run: npm ci
+            - name: Initialize Git user
+              run: git config --global user.email "yonghayden68@gmail.com"
+                  git config --global user.name "Release Workflow"
+            - name: End message
+              run: echo "Completed Release workflow"
