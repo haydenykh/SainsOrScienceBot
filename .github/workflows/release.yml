@@ -1,28 +1,22 @@
 name: Release
 
-on:
-    pull_request:
-        types: [opened]
-
-    # Optionally you can use `workflow_dispatch` to run Changelog CI Manually
-    workflow_dispatch:
-        inputs:
-            release_version:
-                description: "Set Release Version"
-                required: true
+on: workflow_dispatch
 
 jobs:
     release:
         runs-on: ubuntu-latest
         steps:
-            - uses: actions/checkout@v2
+            - name: Checkout source code
+              uses: actions/checkout@v4
               with:
                   fetch-depth: 0
-            - name: git config
+            - name: Install dependencies
+              run: npm ci
+            - name: Initlalize Git user
               run: |
-                  git config user.name "${GITHUB_ACTOR}"
-                  git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
-            - run: npm install
-            - run: npm run release
+                  git config user.name "Release Workflow"
+                  git config user.email "yonghayden68@gmail.com"
+            - name: "Run release"
+              run: npm run release --ci
               env:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
