@@ -5,9 +5,12 @@
     "main": "dist/index.js",
     "type": "module",
     "scripts": {
-        "start": "node .",
+        "cleanMac": "rm -rf dist",
+        "cleanWindows": "del /s /q dist",
+        "startMac": "npm run cleanMac && npm run build && node dist/index.js",
+        "startWindows": "npm run cleanWindows && npm run build && node dist/index.js",
+        "startNoClean": "npm run build && node dist/index.js",
         "build": "npx tsc --build",
-        "dev": "npx tsc watch src/index.ts",
         "release": "npx standard-version"
     },
     "repository": {
