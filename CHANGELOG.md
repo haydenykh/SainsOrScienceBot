@@ -2,6 +2,30 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.2.0](https://github.com/haydenykh/SainsOrScienceBot/compare/v0.1.0...v0.2.0) (2024-08-22)
+
+
+### ⚠ BREAKING CHANGES
+
+* Event Handler
+
+### 🔧 Bug Fixes
+
+* changed `no-unused-vars` property from `error` to `warn` ([3a65cfc](https://github.com/haydenykh/SainsOrScienceBot/commit/3a65cfc3793fe78dc499905799024e399fa88d4f))
+
+
+### 🖇️ Others
+
+* added credits ([0c5020e](https://github.com/haydenykh/SainsOrScienceBot/commit/0c5020e83a327e6cfd49de96a29e7b7ac83e068d))
+
+
+### 🚀 Features
+
+* added [readme](README.md) ([d01756d](https://github.com/haydenykh/SainsOrScienceBot/commit/d01756d94ca7b34f8c8f5780eec2d8e924064f86))
+* added `others` prefix ([8bc887f](https://github.com/haydenykh/SainsOrScienceBot/commit/8bc887f909258161defd909a45c78d2031fb8010))
+* Event Handler ([eaba290](https://github.com/haydenykh/SainsOrScienceBot/commit/eaba2902c372956b31d02c2e151d0065f4493e38))
+* installed `glob` package ([31ecd25](https://github.com/haydenykh/SainsOrScienceBot/commit/31ecd25e2a09eb5650bd1d9f9cc98e8e60a3b757))
+
 ## [0.1.0](https://github.com/haydenykh/SainsOrScienceBot/compare/v0.0.2...v0.1.0) (2024-08-22)
 
 
