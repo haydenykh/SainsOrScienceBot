@@ -1,7 +1,14 @@
-import { Events } from "discord.js";
+import {
+    APIApplicationCommand,
+    Collection,
+    Events,
+    REST,
+    Routes,
+} from "discord.js";
 import Event from "../../Base/Classes/Event.js";
 import ExtendedClient from "../../Base/Classes/ExtendedClient.js";
 import chalk from "chalk";
+import Command from "../../Base/Classes/Command.js";
 
 export default class Ready extends Event {
     constructor(client: ExtendedClient) {
@@ -11,10 +18,31 @@ export default class Ready extends Event {
         });
     }
 
-    Execute() {
+    async Execute() {
         console.log(
             chalk.bgGreenBright(" # ") +
                 chalk.greenBright(` ${this.client.user?.tag} is ready!`)
         );
+
+        const commands: object[] = this.GetJson(this.client.commands);
+        const rest = new REST().setToken(process.env.TOKEN ?? "");
+        const setCommands = (await rest.put(
+            Routes.applicationCommands(this.client.config.clientId),
+            {
+                body: commands,
+            }
+        )) as APIApplicationCommand[];
+
+        console.log(`Successfully set ${setCommands.length} commands.`);
+    }
+
+    private GetJson(commands: Collection<string, Command>): object[] {
+        const data: object[] = [];
+
+        commands.forEach((command) => {
+            data.push(command.data.toJSON());
+        });
+
+        return data;
     }
 }
