@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.1.0](https://github.com/haydenykh/SainsOrScienceBot/compare/v0.0.2...v0.1.0) (2024-08-22)
+
+
+### ⚠ BREAKING CHANGES
+
+* created basic bot setup
+
+### 🔧 Bug Fixes
+
+* added `--build` tag to build script & removed `update` script ([963d6b7](https://github.com/haydenykh/SainsOrScienceBot/commit/963d6b72402c4701bd5c6eda5750280505490a5e))
+* removed release.yml ([163c1c3](https://github.com/haydenykh/SainsOrScienceBot/commit/163c1c393905b3bff04eb729b4ceecf90df62774))
+
+
+### 🚀 Features
+
+* added `clean` scripts for mac and windows ([2b2cb0b](https://github.com/haydenykh/SainsOrScienceBot/commit/2b2cb0bd58cb5b6ab1aeecc68fef01886146f91f))
+* added emojis to changelog file for better formatting ([6a0ec7c](https://github.com/haydenykh/SainsOrScienceBot/commit/6a0ec7c81473936339ea2d18341caddc7defe8d9))
+* created basic bot setup ([5e47c4c](https://github.com/haydenykh/SainsOrScienceBot/commit/5e47c4c275e6ce64b83e6ee6f99bbd2d538fcf48))
+* switched from release-it to standard-version ([55f30fa](https://github.com/haydenykh/SainsOrScienceBot/commit/55f30fa78603fb5b88aa2aa6a571da35f7900123))
+
 ### 0.0.2 (2024-08-22)
 
 
