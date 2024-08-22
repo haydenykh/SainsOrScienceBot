@@ -1,6 +1,6 @@
 {
     "name": "sainsorsciencebot",
-    "version": "0.2.1-wip.1",
+    "version": "0.2.1-wip.2",
     "description": "A bot whom provides science quizzes from Malaysia's secondary schools with both Malay and English support.",
     "main": "dist/index.js",
     "type": "module",
