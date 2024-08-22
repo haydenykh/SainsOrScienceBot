@@ -5,7 +5,12 @@ import tseslint from "typescript-eslint";
 export default [
     { files: ["**/*.{js,mjs,cjs,ts}"] },
     { languageOptions: { globals: globals.node } },
-    { rules: { "no-unused-vars": "warn" } },
+    {
+        rules: {
+            "no-unused-vars": "off",
+            "@typescript-eslint/no-unused-vars": "error",
+        },
+    },
     pluginJs.configs.recommended,
     ...tseslint.configs.recommended,
 ];
