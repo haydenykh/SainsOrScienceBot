@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.1-wip.1](https://github.com/haydenykh/SainsOrScienceBot/compare/v0.2.1-wip.0...v0.2.1-wip.1) (2024-08-22)
+
+
+### ⚠ BREAKING CHANGES
+
+* Command Handler
+
+### 🔧 Bug Fixes
+
+* refix eslint ([9c2a36c](https://github.com/haydenykh/SainsOrScienceBot/commit/9c2a36cf90bcd822ff4eddc651fe87ede0d0fd47))
+* updated `no-unused-vars` rule ([7db8634](https://github.com/haydenykh/SainsOrScienceBot/commit/7db8634b6ab3a7827f11e36f7ad6fa86e3007597))
+
+
+### 🚀 Features
+
+* Command Handler ([7c12db9](https://github.com/haydenykh/SainsOrScienceBot/commit/7c12db999901e253dc7f117ddb33430ff52b64cc))
+
 ### [0.2.1-wip.0](https://github.com/haydenykh/SainsOrScienceBot/compare/v0.2.0...v0.2.1-wip.0) (2024-08-22)
 
 ## [0.2.0](https://github.com/haydenykh/SainsOrScienceBot/compare/v0.1.0...v0.2.0) (2024-08-22)
