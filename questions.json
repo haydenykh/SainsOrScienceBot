@@ -43,7 +43,7 @@
                     }
                 ]
             },
-            "difficulty": "",
+            "difficulty": 0,
             "chapter": ""
         }
     ],
@@ -91,7 +91,7 @@
                     }
                 ]
             },
-            "difficulty": "",
+            "difficulty": 0,
             "chapter": ""
         }
     ],
@@ -135,6 +135,52 @@
                     },
                     {
                         "choice": "Perubahan sistem badan yang boleh dikesan oleh persekitaran.",
+                        "isAnswer": false
+                    }
+                ]
+            },
+            "difficulty": "R",
+            "chapter": "1"
+        },
+        {
+            "BI": {
+                "question": "Which statement is true about the human brain structure?",
+                "choices": [
+                    {
+                        "choice": "Body and thought control centre protected by the skull.",
+                        "isAnswer": true
+                    },
+                    {
+                        "choice": "Contains nerves that branch out from the spinal cord.",
+                        "isAnswer": false
+                    },
+                    {
+                        "choice": "Located in the vertebral column and functions to carry impulses to the brain.",
+                        "isAnswer": false
+                    },
+                    {
+                        "choice": "Interpret the stimulus received by the receptor to produce an impulse.",
+                        "isAnswer": false
+                    }
+                ]
+            },
+            "BM": {
+                "question": "Pernyataan yang manakah benar tentang struktur otak manusia?",
+                "choices": [
+                    {
+                        "choice": "Pusat kawalan badan dan pemikiran yang dilindungi oleh tempurung kelapa.",
+                        "isAnswer": true
+                    },
+                    {
+                        "choice": "Mengandungi saraf yang bercabang keluar dari saraf tunjang.",
+                        "isAnswer": false
+                    },
+                    {
+                        "choice": "Berada di dalam turus vertebra dan berfungsi membawa impuls ke otak.",
+                        "isAnswer": false
+                    },
+                    {
+                        "choice": "Mentafsir rangsangan yang diterima oleh reseptor untuk menghasilkan impuls.",
                         "isAnswer": false
                     }
                 ]
@@ -187,7 +233,7 @@
                     }
                 ]
             },
-            "difficulty": "",
+            "difficulty": 0,
             "chapter": ""
         }
     ],
@@ -235,7 +281,7 @@
                     }
                 ]
             },
-            "difficulty": "",
+            "difficulty": 0,
             "chapter": ""
         }
     ]

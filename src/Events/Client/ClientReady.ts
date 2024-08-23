@@ -1,4 +1,5 @@
 import {
+    ActivityType,
     APIApplicationCommand,
     Collection,
     Events,
@@ -24,6 +25,17 @@ export default class Ready extends Event {
                 chalk.greenBright(` ${this.client.user?.tag} is ready!`)
         );
 
+        this.client.user?.setPresence({
+            status: "online",
+            activities: [
+                {
+                    name: "/random",
+                    state: "Sends a random quiz.",
+                    type: ActivityType.Watching,
+                },
+            ],
+        });
+
         const commands: object[] = this.GetJson(this.client.commands);
         const rest = new REST().setToken(process.env.TOKEN ?? "");
         const setCommands = (await rest.put(
@@ -33,7 +45,12 @@ export default class Ready extends Event {
             }
         )) as APIApplicationCommand[];
 
-        console.log(`Successfully set ${setCommands.length} commands.`);
+        console.log(
+            chalk.bgGreenBright(" # ") +
+                chalk.greenBright(
+                    ` Successfully set ${setCommands.length} commands.`
+                )
+        );
     }
 
     private GetJson(commands: Collection<string, Command>): object[] {

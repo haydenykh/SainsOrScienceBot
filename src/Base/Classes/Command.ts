@@ -4,6 +4,7 @@ import {
     ChatInputCommandInteraction,
     AutocompleteInteraction,
     CacheType,
+    SlashCommandOptionsOnlyBuilder,
 } from "discord.js";
 import Categories from "../Enums/Categories.js";
 import ICommand from "../Interfaces/ICommand.js";
@@ -12,7 +13,10 @@ import ICommandOptions from "../Interfaces/ICommandOptions.js";
 
 export default class Command implements ICommand {
     client: ExtendedClient;
-    data: SlashCommandBuilder | ContextMenuCommandBuilder;
+    data:
+        | SlashCommandBuilder
+        | ContextMenuCommandBuilder
+        | SlashCommandOptionsOnlyBuilder;
     category: Categories;
     cooldown: number;
 

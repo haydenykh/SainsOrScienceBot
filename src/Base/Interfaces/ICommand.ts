@@ -3,13 +3,17 @@ import {
     ChatInputCommandInteraction,
     ContextMenuCommandBuilder,
     SlashCommandBuilder,
+    SlashCommandOptionsOnlyBuilder,
 } from "discord.js";
 import ExtendedClient from "../Classes/ExtendedClient.js";
 import Categories from "../Enums/Categories.js";
 
 export default interface ICommand {
     client: ExtendedClient;
-    data: SlashCommandBuilder | ContextMenuCommandBuilder;
+    data:
+        | SlashCommandBuilder
+        | ContextMenuCommandBuilder
+        | SlashCommandOptionsOnlyBuilder;
     category: Categories;
     cooldown: number;
 
