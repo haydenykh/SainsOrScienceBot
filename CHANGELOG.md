@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.4.0](https://github.com/haydenykh/SainsOrScienceBot/compare/v0.3.0...v0.4.0) (2024-08-23)
+
+
+### ⚠ BREAKING CHANGES
+
+* added functioning random question generator
+
+### 🔧 Bug Fixes
+
+* switched from one-time execution to a watch command ([37c3086](https://github.com/haydenykh/SainsOrScienceBot/commit/37c3086f621c603145fc444667a5c481c50614bc))
+
+
+### 🚀 Features
+
+* added embed message ([ccec612](https://github.com/haydenykh/SainsOrScienceBot/commit/ccec612de9566d8c1bbc1851d1e9b5cc42d32631))
+* added functioning random question generator ([7a840cd](https://github.com/haydenykh/SainsOrScienceBot/commit/7a840cdce4682ff7be1a94cb1bd3f04f14a4d1f7))
+* added prettierrc.json to support more formatting in the future ([6c3a810](https://github.com/haydenykh/SainsOrScienceBot/commit/6c3a8104c95a54d2826a631cdbd861a08004461e))
+
 ## [0.3.0](https://github.com/haydenykh/SainsOrScienceBot/compare/v0.2.1-wip.2...v0.3.0) (2024-08-22)
 
 ### [0.2.1-wip.2](https://github.com/haydenykh/SainsOrScienceBot/compare/v0.2.1-wip.1...v0.2.1-wip.2) (2024-08-22)
