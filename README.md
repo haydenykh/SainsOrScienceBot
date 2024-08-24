@@ -1,7 +1,16 @@
 # SainsOrScience Bot
 
-**SainsOrScience** is a bot whom provides _science quizzes_ from Malaysia's secondary schools with both 🇲🇾 **Malay** and 🇬🇧 **English** language support.
+### Description
 
-Credits to [@SpikeThatMike](https://www.youtube.com/@spikethatmike) on YouTube for helping out with this project.
+**SainsOrScience** is a bot whom provides ==Science, Biology, Physics, Geography, Mathematics, Additional Mathematics and Chemistry== quizzes from Malaysia's secondary schools with both ==🇲🇾 **Malay**== and ==🇬🇧 **English**== language support.
 
-> To contribute, go to the [pull requests](https://github.com/haydenykh/SainsOrScienceBot/pulls) page and help create more questions or fix errors.
+> Credits to [@SpikeThatMike](https://www.youtube.com/@spikethatmike)'s tutorial on YouTube for helping out with this project.
+
+### Features
+
+`/random <level: required>`
+: Sends out a random question from the [questions list](questions.json) with the level option (Form 1, Form 2, Form 3, Form 4, Form 5).
+
+### Contribution
+
+Head over to the [pull requests](https://github.com/haydenykh/SainsOrScienceBot/pulls) page and help create more questions or fix errors.
