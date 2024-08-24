@@ -3,8 +3,9 @@
         { "type": "feat", "section": "🚀 Features" },
         { "type": "fix", "section": "🔧 Bug Fixes" },
         { "type": "others", "section": "🖇️ Others" },
-        { "type": "test", "section": "Tests", "hidden": true },
-        { "type": "build", "section": "Build System", "hidden": true },
+        { "type": "style", "section": "🔮 Style" },
+        { "type": "test", "section": "🧪 Tests", "hidden": true },
+        { "type": "build", "section": "🔧 Build System", "hidden": true },
         { "type": "ci", "hidden": true }
     ]
 }
