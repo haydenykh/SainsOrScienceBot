@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.5.3](https://github.com/haydenykh/SainsOrScienceBot/compare/v0.5.2...v0.5.3) (2024-08-24)
+
+
+### 🖇️ Others
+
+* added new tags ([f756882](https://github.com/haydenykh/SainsOrScienceBot/commit/f7568820808513a91d934a62a2f1ff3732c75bd8))
+
 ### [0.5.2](https://github.com/haydenykh/SainsOrScienceBot/compare/v0.5.1...v0.5.2) (2024-08-24)
 
 
