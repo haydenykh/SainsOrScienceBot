@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.5.1](https://github.com/haydenykh/SainsOrScienceBot/compare/v0.5.0...v0.5.1) (2024-08-24)
+
+
+### 🔧 Bug Fixes
+
+* removed highlight and definition since it doesn't work on github ([dbe92d1](https://github.com/haydenykh/SainsOrScienceBot/commit/dbe92d10c6fe33ef70ac16204d3fb9efae2bb894))
+
 ## [0.5.0](https://github.com/haydenykh/SainsOrScienceBot/compare/v0.4.0...v0.5.0) (2024-08-24)
 
 
