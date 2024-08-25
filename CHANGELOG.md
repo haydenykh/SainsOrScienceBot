@@ -2,6 +2,31 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.6.0](https://github.com/haydenykh/SainsOrScienceBot/compare/v0.5.3...v0.6.0) (2024-08-25)
+
+
+### ⚠ BREAKING CHANGES
+
+* Hint Feature
+
+### 🚀 Features
+
+* Hint Feature ([159896e](https://github.com/haydenykh/SainsOrScienceBot/commit/159896e7a8883745c9dd9a66f1e431097955f1d4))
+* migrated file & created new science f3 questions ([13e0fe5](https://github.com/haydenykh/SainsOrScienceBot/commit/13e0fe56a5d6960adf02c7441c9a97cc07d4513f))
+* question images ([805981f](https://github.com/haydenykh/SainsOrScienceBot/commit/805981f2ecef6cb9950022001060dbc55ddbb801))
+
+
+### 🔮 Style
+
+* removed comment ([4a91eec](https://github.com/haydenykh/SainsOrScienceBot/commit/4a91eec04e70f82facbe19ce0deb211e9b8182de))
+
+
+### 🔧 Bug Fixes
+
+* images not showing in the embed ([275bd6c](https://github.com/haydenykh/SainsOrScienceBot/commit/275bd6c168cc6eab7e84ea38214686038b95a186))
+* now shows the correct answer by sending it in the channel, silent ping everyone and deletes after 10 seconds\nthe question embed will be deleted after 15 seconds ([5a1faca](https://github.com/haydenykh/SainsOrScienceBot/commit/5a1facaf98958bc23f94dab01d1d48455158856d))
+* removed time property & added `node` to fs package ([4a54529](https://github.com/haydenykh/SainsOrScienceBot/commit/4a5452927b88e5d60ac185a3196722ee1069b769))
+
 ### [0.5.3](https://github.com/haydenykh/SainsOrScienceBot/compare/v0.5.2...v0.5.3) (2024-08-24)
 
 
