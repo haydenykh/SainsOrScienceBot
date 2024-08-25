@@ -1,0 +1,665 @@
+{
+    "f1": [
+        {
+            "BI": {
+                "question": "",
+                "choices": [
+                    {
+                        "choice": "",
+                        "isAnswer": true
+                    },
+                    {
+                        "choice": "",
+                        "isAnswer": false
+                    },
+                    {
+                        "choice": "",
+                        "isAnswer": false
+                    },
+                    {
+                        "choice": "",
+                        "isAnswer": false
+                    }
+                ]
+            },
+            "BM": {
+                "question": "",
+                "choices": [
+                    {
+                        "choice": "",
+                        "isAnswer": true
+                    },
+                    {
+                        "choice": "",
+                        "isAnswer": false
+                    },
+                    {
+                        "choice": "",
+                        "isAnswer": false
+                    },
+                    {
+                        "choice": "",
+                        "isAnswer": false
+                    }
+                ]
+            },
+            "difficulty": 0,
+            "chapter": ""
+        }
+    ],
+    "f2": [
+        {
+            "BI": {
+                "question": "",
+                "choices": [
+                    {
+                        "choice": "",
+                        "isAnswer": true
+                    },
+                    {
+                        "choice": "",
+                        "isAnswer": false
+                    },
+                    {
+                        "choice": "",
+                        "isAnswer": false
+                    },
+                    {
+                        "choice": "",
+                        "isAnswer": false
+                    }
+                ]
+            },
+            "BM": {
+                "question": "",
+                "choices": [
+                    {
+                        "choice": "",
+                        "isAnswer": true
+                    },
+                    {
+                        "choice": "",
+                        "isAnswer": false
+                    },
+                    {
+                        "choice": "",
+                        "isAnswer": false
+                    },
+                    {
+                        "choice": "",
+                        "isAnswer": false
+                    }
+                ]
+            },
+            "difficulty": 0,
+            "chapter": ""
+        }
+    ],
+    "f3": [
+        {
+            "BI": {
+                "question": "What is the definition of stimulus?",
+                "choices": [
+                    {
+                        "choice": "The change in surrounding that can be detected by the body system.",
+                        "isAnswer": true
+                    },
+                    {
+                        "choice": "The organism's action based on the stimulus.",
+                        "isAnswer": false
+                    },
+                    {
+                        "choice": "The change in surrounding that can affect the body system.",
+                        "isAnswer": false
+                    },
+                    {
+                        "choice": "The change in the body system that can be detected by the surroundings.",
+                        "isAnswer": false
+                    }
+                ]
+            },
+            "BM": {
+                "question": "Apakah definisi rangsangan?",
+                "choices": [
+                    {
+                        "choice": "Perubahan persekitaran yang boleh dikesan oleh sistem badan.",
+                        "isAnswer": true
+                    },
+                    {
+                        "choice": "Tindakan organisma terhadap rangsangan tersebut.",
+                        "isAnswer": false
+                    },
+                    {
+                        "choice": "Perubahan persekitaran yang boleh mempengaruhi sistem badan.",
+                        "isAnswer": false
+                    },
+                    {
+                        "choice": "Perubahan sistem badan yang boleh dikesan oleh persekitaran.",
+                        "isAnswer": false
+                    }
+                ]
+            },
+            "difficulty": "R",
+            "chapter": "1"
+        },
+        {
+            "BI": {
+                "question": "The following diagram shows one of the structures involved in the human nervous system. Which statement is true about the structure?",
+                "choices": [
+                    {
+                        "choice": "Body and thought control centre protected by the skull.",
+                        "isAnswer": true
+                    },
+                    {
+                        "choice": "Contains nerves that branch out from the spinal cord.",
+                        "isAnswer": false
+                    },
+                    {
+                        "choice": "Located in the vertebral column and functions to carry impulses to the brain.",
+                        "isAnswer": false
+                    },
+                    {
+                        "choice": "Interpret the stimulus received by the receptor to produce an impulse.",
+                        "isAnswer": false
+                    }
+                ]
+            },
+            "BM": {
+                "question": "Rajah berikut menunjukkan salah satu struktur yang terlibat dalam sistem saraf manusia. Pernyataan yang manakah benar tentang struktur tersebut?",
+                "choices": [
+                    {
+                        "choice": "Pusat kawalan badan dan pemikiran yang dilindungi oleh tempurung kelapa.",
+                        "isAnswer": true
+                    },
+                    {
+                        "choice": "Mengandungi saraf yang bercabang keluar dari saraf tunjang.",
+                        "isAnswer": false
+                    },
+                    {
+                        "choice": "Berada di dalam turus vertebra dan berfungsi membawa impuls ke otak.",
+                        "isAnswer": false
+                    },
+                    {
+                        "choice": "Mentafsir rangsangan yang diterima oleh reseptor untuk menghasilkan impuls.",
+                        "isAnswer": false
+                    }
+                ]
+            },
+            "difficulty": "S",
+            "chapter": "1",
+            "image": "https://github.com/haydenykh/SainsOrScienceBot/tree/main/assets/images/science/f3/brain.jpg?raw=true"
+        },
+        {
+            "BI": {
+                "question": "The following diagram shows a type of involuntary action to avoid injury. What sensory organs and receptors are involved in detecting the stimulus?",
+                "choices": [
+                    {
+                        "choice": "**Sensory organ**: Skin | **Receptor**: Heat receptor",
+                        "isAnswer": true
+                    },
+                    {
+                        "choice": "**Sensory organ**: Finger | **Receptor**: Pain receptor",
+                        "isAnswer": false
+                    },
+                    {
+                        "choice": "**Sensory organ**: Skin | **Receptor**: Pain receptor",
+                        "isAnswer": false
+                    },
+                    {
+                        "choice": "**Sensory organ**: Finger | **Receptor**: Heat receptor",
+                        "isAnswer": false
+                    }
+                ]
+            },
+            "BM": {
+                "question": "Rajah berikut menunjukkan sejenis tindakan luar kawal untuk mengelakkan kecederaan. Apakah organ deria dan reseptor yang terlibat dalam mengesan rangsangan tersebut?",
+                "choices": [
+                    {
+                        "choice": "**Organ deria**: Kulit | **Reseptor**: Reseptor haba",
+                        "isAnswer": true
+                    },
+                    {
+                        "choice": "**Organ deria**: Jari | **Reseptor**: Reseptor sakit",
+                        "isAnswer": false
+                    },
+                    {
+                        "choice": "**Organ deria**: Kulit | **Reseptor**: Reseptor sakit",
+                        "isAnswer": false
+                    },
+                    {
+                        "choice": "**Organ deria**: Jari | **Reseptor**: Reseptor haba",
+                        "isAnswer": false
+                    }
+                ]
+            },
+            "hint": "Apakah yang dibebaskan oleh lilin?\n*What do candles release?*",
+            "difficulty": "R",
+            "chapter": "1",
+            "image": "https://github.com/haydenykh/SainsOrScienceBot/tree/main/assets/images/science/f3/involuntary_action_to_avoid_injury.jpg?raw=true"
+        },
+        {
+            "BI": {
+                "question": "`X` in the diagram shows one of the photoreceptors found in the retina. The function of the cells is to see during the day or in bright conditions and they are sensitive to colour. Name `X`.",
+                "choices": [
+                    {
+                        "choice": "Rod cell",
+                        "isAnswer": false
+                    },
+                    {
+                        "choice": "Cone cell",
+                        "isAnswer": true
+                    },
+                    {
+                        "choice": "Nerve cell",
+                        "isAnswer": false
+                    },
+                    {
+                        "choice": "Ganglion cell",
+                        "isAnswer": false
+                    }
+                ]
+            },
+            "BM": {
+                "question": "`X` dalam rajah berikut menunjukkan salah satu fotoreseptor yang terdapat pada retina. Sel ini berfungsi untuk penglihatan pada waktu siang atau dalam keadaan terang dan peka terhadap warna. Namakan `X`.",
+                "choices": [
+                    {
+                        "choice": "Sel rod",
+                        "isAnswer": false
+                    },
+                    {
+                        "choice": "Sel kon",
+                        "isAnswer": true
+                    },
+                    {
+                        "choice": "Sel saraf",
+                        "isAnswer": false
+                    },
+                    {
+                        "choice": "Sel ganglion",
+                        "isAnswer": false
+                    }
+                ]
+            },
+            "difficulty": "R",
+            "chapter": "1",
+            "image": "https://github.com/haydenykh/SainsOrScienceBot/tree/main/assets/images/science/f3/photoreceptors_found_in_the_retina.jpg?raw=true"
+        },
+        {
+            "BI": {
+                "question": "The surface of the tongue is divided into several areas that are sensitive to different tastes. Which of the following foods is associated with sensitivity in area `X` of the tongue?",
+                "choices": [
+                    {
+                        "choice": "Bitter gourd",
+                        "isAnswer": true
+                    },
+                    {
+                        "choice": "Cake",
+                        "isAnswer": false
+                    },
+                    {
+                        "choice": "Chilli",
+                        "isAnswer": false
+                    },
+                    {
+                        "choice": "Vinegar",
+                        "isAnswer": false
+                    }
+                ]
+            },
+            "BM": {
+                "question": "Permukaan lidah terbahagi kepada beberapa kawasan yang peka terhadap rasa yang berlainan. Antara manakah yang berikut, yang manakah berkaitan dengan kepekaan kawasan `X` pada lidah?",
+                "choices": [
+                    {
+                        "choice": "Peria",
+                        "isAnswer": true
+                    },
+                    {
+                        "choice": "Kek",
+                        "isAnswer": false
+                    },
+                    {
+                        "choice": "Cili",
+                        "isAnswer": false
+                    },
+                    {
+                        "choice": "Cuka",
+                        "isAnswer": false
+                    }
+                ]
+            },
+            "difficulty": "R",
+            "chapter": "1",
+            "image": "https://github.com/haydenykh/SainsOrScienceBot/tree/main/assets/images/science/f3/tongue.jpg?raw=true"
+        },
+        {
+            "BI": {
+                "question": "When seeing, an image of an object will be formed on the retina. State the characteristics of the image.",
+                "choices": [
+                    {
+                        "choice": "Upright and virtual",
+                        "isAnswer": false
+                    },
+                    {
+                        "choice": "Inverted and smaller",
+                        "isAnswer": true
+                    },
+                    {
+                        "choice": "Upright and smaller",
+                        "isAnswer": false
+                    },
+                    {
+                        "choice": "Inverted and larger",
+                        "isAnswer": false
+                    }
+                ]
+            },
+            "BM": {
+                "question": "Semasa melihat, imej objek akan terbentuk di atas retina. Nyatakan ciri-ciri imej tersebut.",
+                "choices": [
+                    {
+                        "choice": "Tegak dan maya",
+                        "isAnswer": false
+                    },
+                    {
+                        "choice": "Songsang dan lebih kecil",
+                        "isAnswer": true
+                    },
+                    {
+                        "choice": "Tegak dan lebih kecil",
+                        "isAnswer": false
+                    },
+                    {
+                        "choice": "Songsang dan lebih besar",
+                        "isAnswer": false
+                    }
+                ]
+            },
+            "difficulty": "S",
+            "chapter": "1"
+        },
+        {
+            "BI": {
+                "question": "In addition to difficulty breathing, people with colds also lack appetite. Which of the following statements describes the situation?",
+                "choices": [
+                    {
+                        "choice": "Her throat feels bitter and she has no desire for food.",
+                        "isAnswer": false
+                    },
+                    {
+                        "choice": "Taste bud cells on the tongue become insensitive to the delicious taste of food.",
+                        "isAnswer": false
+                    },
+                    {
+                        "choice": "Mucus fills the oesophagus making the process of swallowing food difficult.",
+                        "isAnswer": false
+                    },
+                    {
+                        "choice": "The nasal cavity is filled with mucus and prevents chemical molecules from the food from being detected by the smell receptors.",
+                        "isAnswer": true
+                    }
+                ]
+            },
+            "BM": {
+                "question": "Selain daripada sukar bernafas, orang yang mengalami selsema juga kurang selera makan. Antara pernyataan berikut, yang manakah menerangkan keadaan tersebut?",
+                "choices": [
+                    {
+                        "choice": "Tekaknya berasa pahit dan tiada keinginan terhadap makanan.",
+                        "isAnswer": false
+                    },
+                    {
+                        "choice": "Sel-sel tunas rasa pada lidah menjadi tidak peka terhadap rasa lazat makanan.",
+                        "isAnswer": false
+                    },
+                    {
+                        "choice": "Mukus memenuhi saluran esofagus menyebabkan proses menelan makanan menjadi sukar.",
+                        "isAnswer": false
+                    },
+                    {
+                        "choice": "Rongga hidungnya dipenuhi mukus dan menghalang molekul bahan kimia dari makanan untuk dikesan oleh reseptor bau.",
+                        "isAnswer": true
+                    }
+                ]
+            },
+            "difficulty": "T",
+            "chapter": "1",
+            "image": "https://github.com/haydenykh/SainsOrScienceBot/tree/main/assets/images/science/f3/people_with_colds_lack_appetite.jpg?raw=true"
+        },
+        {
+            "BI": {
+                "question": "The plant roots and shoots in the following diagram show tropism responses. Name the responses.",
+                "choices": [
+                    {
+                        "choice": "**Root**: Negative geotropism | **Shoot**: Positive phototropism",
+                        "isAnswer": false
+                    },
+                    {
+                        "choice": "**Root**: Positive hydrotropism | **Shoot**: Positive phototropism",
+                        "isAnswer": true
+                    },
+                    {
+                        "choice": "**Root**: Positive geotropism | **Shoot**: Positive phototropism",
+                        "isAnswer": false
+                    },
+                    {
+                        "choice": "**Root**: Negative hydrotropism | **Shoot**: Negative phototropism",
+                        "isAnswer": false
+                    }
+                ]
+            },
+            "BM": {
+                "question": "Akar dan pucuk tumbuhan dalam rajah berikut menunjukkan gerak balas tropisme. Namakan jenis gerak balas tersebut.",
+                "choices": [
+                    {
+                        "choice": "**Akar**: Geotropisme negatif | **Pucuk**: Fototropisme positif",
+                        "isAnswer": false
+                    },
+                    {
+                        "choice": "**Akar**: Hidrotropisme positif | **Pucuk**: Fototropisme positif",
+                        "isAnswer": true
+                    },
+                    {
+                        "choice": "**Akar**: Geotropisme positif | **Pucuk**: Fototropisme positif",
+                        "isAnswer": false
+                    },
+                    {
+                        "choice": "**Akar**: Hidrotropisme negatif | **Pucuk**: Fototropisme negatif",
+                        "isAnswer": false
+                    }
+                ]
+            },
+            "difficulty": "S",
+            "chapter": "1",
+            "image": "https://github.com/haydenykh/SainsOrScienceBot/tree/main/assets/images/science/f3/roots_and_shoots_show_tropism_responses.jpg?raw=true"
+        },
+        {
+            "BI": {
+                "question": "Which animals have stereoscopic vision?",
+                "choices": [
+                    {
+                        "choice": "Eagle",
+                        "isAnswer": true
+                    },
+                    {
+                        "choice": "Goat",
+                        "isAnswer": false
+                    },
+                    {
+                        "choice": "Rabbit",
+                        "isAnswer": false
+                    },
+                    {
+                        "choice": "Horse",
+                        "isAnswer": false
+                    }
+                ]
+            },
+            "BM": {
+                "question": "Haiwan manakah yang mempunyai penglihatan stereoskopik?",
+                "choices": [
+                    {
+                        "choice": "Helang",
+                        "isAnswer": true
+                    },
+                    {
+                        "choice": "Kambing",
+                        "isAnswer": false
+                    },
+                    {
+                        "choice": "Arnab",
+                        "isAnswer": false
+                    },
+                    {
+                        "choice": "Kuda",
+                        "isAnswer": false
+                    }
+                ]
+            },
+            "hint": "Haiwan yang penglihatan stereoskopik kebanyakannya adalah pemangsa.\n*Animals with stereoscopic vision are mostly predators.*",
+            "difficulty": "R",
+            "chapter": "1"
+        },
+        {
+            "BI": {
+                "question": "The fish has a longitudinal line on its body known as the lateral line. What is the function of the line?",
+                "choices": [
+                    {
+                        "choice": "Scaring the predators in their habitat.",
+                        "isAnswer": false
+                    },
+                    {
+                        "choice": "As a signal of maturity to attract mating partners.",
+                        "isAnswer": false
+                    },
+                    {
+                        "choice": "Detecting prey and avoiding predators around it.",
+                        "isAnswer": true
+                    },
+                    {
+                        "choice": "Making the fish look stronger to scare the prey around it.",
+                        "isAnswer": false
+                    }
+                ]
+            },
+            "BM": {
+                "question": "Ikan mempunyai satu garisan memanjang apda badannya yang dikenali sebagai garis lateral. Apakah fungsi garisan tersebut?",
+                "choices": [
+                    {
+                        "choice": "Menakutkan pemangsa yang ada di dalam habitatnya.",
+                        "isAnswer": false
+                    },
+                    {
+                        "choice": "Sebagai isyarat kematangan untuk menarik pasangan mengawan.",
+                        "isAnswer": false
+                    },
+                    {
+                        "choice": "Mengesan mangsa dan mengelakkan diri dari pemangsa di sekelilingnya.",
+                        "isAnswer": true
+                    },
+                    {
+                        "choice": "Menjadikan ikan kelihatan lebih kuat untuk menakutkan mengsa di sekelilingnya.",
+                        "isAnswer": false
+                    }
+                ]
+            },
+            "difficulty": "T",
+            "chapter": "1",
+            "image": "https://github.com/haydenykh/SainsOrScienceBot/tree/main/assets/images/science/f3/fishes_lateral_line.jpg?raw=true"
+        }
+    ],
+    "f4": [
+        {
+            "BI": {
+                "question": "",
+                "choices": [
+                    {
+                        "choice": "",
+                        "isAnswer": true
+                    },
+                    {
+                        "choice": "",
+                        "isAnswer": false
+                    },
+                    {
+                        "choice": "",
+                        "isAnswer": false
+                    },
+                    {
+                        "choice": "",
+                        "isAnswer": false
+                    }
+                ]
+            },
+            "BM": {
+                "question": "",
+                "choices": [
+                    {
+                        "choice": "",
+                        "isAnswer": true
+                    },
+                    {
+                        "choice": "",
+                        "isAnswer": false
+                    },
+                    {
+                        "choice": "",
+                        "isAnswer": false
+                    },
+                    {
+                        "choice": "",
+                        "isAnswer": false
+                    }
+                ]
+            },
+            "difficulty": 0,
+            "chapter": ""
+        }
+    ],
+    "f5": [
+        {
+            "BI": {
+                "question": "",
+                "choices": [
+                    {
+                        "choice": "",
+                        "isAnswer": true
+                    },
+                    {
+                        "choice": "",
+                        "isAnswer": false
+                    },
+                    {
+                        "choice": "",
+                        "isAnswer": false
+                    },
+                    {
+                        "choice": "",
+                        "isAnswer": false
+                    }
+                ]
+            },
+            "BM": {
+                "question": "",
+                "choices": [
+                    {
+                        "choice": "",
+                        "isAnswer": true
+                    },
+                    {
+                        "choice": "",
+                        "isAnswer": false
+                    },
+                    {
+                        "choice": "",
+                        "isAnswer": false
+                    },
+                    {
+                        "choice": "",
+                        "isAnswer": false
+                    }
+                ]
+            },
+            "difficulty": 0,
+            "chapter": ""
+        }
+    ]
+}
