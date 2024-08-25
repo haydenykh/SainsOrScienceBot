@@ -89,7 +89,7 @@ export default class TestCommand extends Command {
                 Math.floor(Math.random() * filteredQuestions.length)
             ];
 
-        let correctAnswerId: string | null = null; // Store the correct answer's ID here
+        let correctAnswerId: string | null = null;
 
         const choiceOptions = ["A", "B", "C", "D"];
 
