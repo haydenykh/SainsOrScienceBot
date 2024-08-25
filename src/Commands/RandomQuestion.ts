@@ -11,7 +11,7 @@ import {
 import Command from "../Base/Classes/Command.js";
 import ExtendedClient from "../Base/Classes/ExtendedClient.js";
 import Categories from "../Base/Enums/Categories.js";
-import { readFileSync } from "fs";
+import { readFileSync } from "node:fs";
 import ShuffleArray from "../Functions/ShuffleArray.js";
 
 const scienceJsonString = readFileSync("questions/science.json", "utf-8");
@@ -175,7 +175,6 @@ export default class TestCommand extends Command {
         const buttonCollector = reply.createMessageComponentCollector({
             componentType: ComponentType.Button,
             filter: (i) => i.user.id === interaction.user.id,
-            time: 60_000,
         });
 
         buttonCollector.on("collect", async (i) => {
