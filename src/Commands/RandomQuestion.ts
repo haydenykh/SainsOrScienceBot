@@ -204,12 +204,29 @@ export default class TestCommand extends Command {
                         )
                     );
 
-                await reply.edit({
-                    embeds: [questionEmbed.setColor(Colors.Green)],
-                    components: [disabledRow, disabledHintRow],
-                });
+                await reply
+                    .edit({
+                        embeds: [questionEmbed.setColor(Colors.Green)],
+                        components: [disabledRow, disabledHintRow],
+                    })
+                    .then((i_) => {
+                        setTimeout(() => {
+                            i_.delete();
+                        }, 15000);
+                    });
 
-                i.reply({
+                await i
+                    .reply({
+                        content: `@everyone The correct answer was **${correctAnswerId.toUpperCase()}**.`,
+                        flags: [4096],
+                    })
+                    .then((i_) => {
+                        setTimeout(() => {
+                            i_.delete();
+                        }, 10000);
+                    });
+
+                i.followUp({
                     content:
                         "🎉 You got it correct! Rerun command? </random:1276458136252842029>",
                     ephemeral: true,
