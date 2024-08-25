@@ -187,7 +187,7 @@
             },
             "difficulty": "S",
             "chapter": "1",
-            "image": "https://github.com/haydenykh/SainsOrScienceBot/tree/main/assets/images/science/f3/brain.jpg?raw=true"
+            "image": "https://raw.githubusercontent.com/haydenykh/SainsOrScienceBot/main/assets/images/science/f3/brain.jpg"
         },
         {
             "BI": {
@@ -235,7 +235,7 @@
             "hint": "Apakah yang dibebaskan oleh lilin?\n*What do candles release?*",
             "difficulty": "R",
             "chapter": "1",
-            "image": "https://github.com/haydenykh/SainsOrScienceBot/tree/main/assets/images/science/f3/involuntary_action_to_avoid_injury.jpg?raw=true"
+            "image": "https://raw.githubusercontent.com/haydenykh/SainsOrScienceBot/main/assets/images/science/f3/involuntary_action_to_avoid_injury.jpg"
         },
         {
             "BI": {
@@ -282,7 +282,7 @@
             },
             "difficulty": "R",
             "chapter": "1",
-            "image": "https://github.com/haydenykh/SainsOrScienceBot/tree/main/assets/images/science/f3/photoreceptors_found_in_the_retina.jpg?raw=true"
+            "image": "https://raw.githubusercontent.com/haydenykh/SainsOrScienceBot/main/assets/images/science/f3/photoreceptors_found_in_the_retina.jpg"
         },
         {
             "BI": {
@@ -329,7 +329,7 @@
             },
             "difficulty": "R",
             "chapter": "1",
-            "image": "https://github.com/haydenykh/SainsOrScienceBot/tree/main/assets/images/science/f3/tongue.jpg?raw=true"
+            "image": "https://raw.githubusercontent.com/haydenykh/SainsOrScienceBot/main/assets/images/science/f3/tongue.jpg"
         },
         {
             "BI": {
@@ -422,7 +422,7 @@
             },
             "difficulty": "T",
             "chapter": "1",
-            "image": "https://github.com/haydenykh/SainsOrScienceBot/tree/main/assets/images/science/f3/people_with_colds_lack_appetite.jpg?raw=true"
+            "image": "https://raw.githubusercontent.com/haydenykh/SainsOrScienceBot/main/assets/images/science/f3/people_with_colds_lack_appetite.jpg"
         },
         {
             "BI": {
@@ -469,7 +469,7 @@
             },
             "difficulty": "S",
             "chapter": "1",
-            "image": "https://github.com/haydenykh/SainsOrScienceBot/tree/main/assets/images/science/f3/roots_and_shoots_show_tropism_responses.jpg?raw=true"
+            "image": "https://raw.githubusercontent.com/haydenykh/SainsOrScienceBot/main/assets/images/science/f3/roots_and_shoots_show_tropism_responses.jpg"
         },
         {
             "BI": {
@@ -563,7 +563,7 @@
             },
             "difficulty": "T",
             "chapter": "1",
-            "image": "https://github.com/haydenykh/SainsOrScienceBot/tree/main/assets/images/science/f3/fishes_lateral_line.jpg?raw=true"
+            "image": "https://raw.githubusercontent.com/haydenykh/SainsOrScienceBot/main/assets/images/science/f3/fishes_lateral_line.jpg"
         }
     ],
     "f4": [
