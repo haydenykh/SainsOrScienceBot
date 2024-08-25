@@ -3,6 +3,7 @@ import {
     ButtonBuilder,
     ButtonStyle,
     ChatInputCommandInteraction,
+    Colors,
     ComponentType,
     EmbedBuilder,
     SlashCommandBuilder,
@@ -13,8 +14,8 @@ import Categories from "../Base/Enums/Categories.js";
 import { readFileSync } from "fs";
 import ShuffleArray from "../Functions/ShuffleArray.js";
 
-const jsonString = readFileSync("questions.json", "utf-8");
-const Questions = JSON.parse(jsonString);
+const scienceJsonString = readFileSync("questions/science.json", "utf-8");
+const ScienceQuestions = JSON.parse(scienceJsonString);
 
 type QuestionObject = [
     {
@@ -38,6 +39,7 @@ type QuestionObject = [
         };
         difficulty: number;
         chapter: string;
+        hint?: string;
         image?: string;
     }
 ];
@@ -72,14 +74,14 @@ export default class TestCommand extends Command {
                         .setRequired(true)
                 ),
             category: Categories.Utilities,
-            cooldown: 3,
+            cooldown: 2.5,
         });
     }
     async Execute(interaction: ChatInputCommandInteraction) {
         const { options } = interaction;
         const level = options.getString("level", true);
 
-        const filteredQuestions: QuestionObject = Questions[level].map(
+        const filteredQuestions: QuestionObject = ScienceQuestions[level].map(
             (q: QuestionObject) => q
         );
         const randomQuestion =
@@ -97,8 +99,17 @@ export default class TestCommand extends Command {
                     new ButtonBuilder()
                         .setCustomId(choice.toLowerCase())
                         .setLabel(choice)
-                        .setStyle(ButtonStyle.Primary)
+                        .setStyle(ButtonStyle.Secondary)
                 )
+            );
+
+        const hintButtonRow =
+            new ActionRowBuilder<ButtonBuilder>().addComponents(
+                new ButtonBuilder()
+                    .setCustomId("hint")
+                    .setEmoji("💡")
+                    .setLabel("Hint")
+                    .setStyle(ButtonStyle.Danger)
             );
 
         function formatChoices(): string[] {
@@ -136,7 +147,7 @@ export default class TestCommand extends Command {
 
             const formattedChoices = shuffledChoices.map(
                 (choice) =>
-                    `:regional_indicator_${choice.label.toLowerCase()}: ${
+                    `:regional_indicator_${choice.label.toLowerCase()}:\n${
                         choice.bmChoice
                     }\n_${choice.biChoice}_`
             );
@@ -151,43 +162,63 @@ export default class TestCommand extends Command {
                     randomQuestion[Language.BI].question
                 }_**\n\n${formatChoices().join("\n\n")}`
             )
-            .setImage(randomQuestion.image ? randomQuestion.image : null)
-            .setColor("Random")
+            .setThumbnail(randomQuestion.image ? randomQuestion.image : null)
             .setFooter({
                 text: `Difficulty: ${randomQuestion.difficulty} | Chapter: ${randomQuestion.chapter}`,
             });
 
         const reply = await interaction.reply({
             embeds: [questionEmbed],
-            components: [choicesButtonRow],
+            components: [choicesButtonRow, hintButtonRow],
         });
 
-        const choicesButtonCollector = reply.createMessageComponentCollector({
+        const buttonCollector = reply.createMessageComponentCollector({
             componentType: ComponentType.Button,
             filter: (i) => i.user.id === interaction.user.id,
             time: 60_000,
         });
 
-        choicesButtonCollector.on("collect", async (i) => {
+        buttonCollector.on("collect", async (i) => {
             const id = i.customId;
+            if (id === "hint") {
+                i.reply({
+                    content: randomQuestion.hint
+                        ? `💡 Hint:\n${randomQuestion.hint}`
+                        : "No hint available.",
+                    ephemeral: true,
+                });
+                return;
+            }
             if (id === correctAnswerId) {
                 const disabledRow =
                     new ActionRowBuilder<ButtonBuilder>().addComponents(
-                        choicesButtonRow.components.map((btn) =>
-                            ButtonBuilder.from(btn).setDisabled(true)
+                        choicesButtonRow.components.map((button) =>
+                            ButtonBuilder.from(button)
+                                .setDisabled(true)
+                                .setStyle(ButtonStyle.Success)
+                        )
+                    );
+                const disabledHintRow =
+                    new ActionRowBuilder<ButtonBuilder>().addComponents(
+                        hintButtonRow.components.map((button) =>
+                            ButtonBuilder.from(button).setDisabled(true)
                         )
                     );
 
                 await reply.edit({
-                    components: [disabledRow],
+                    embeds: [questionEmbed.setColor(Colors.Green)],
+                    components: [disabledRow, disabledHintRow],
                 });
 
                 i.reply({
                     content:
-                        "🎉 You got it correct! Rerun command: </random:1276458136252842029>",
+                        "🎉 You got it correct! Rerun command? </random:1276458136252842029>",
                     ephemeral: true,
                 });
             } else {
+                await reply.edit({
+                    embeds: [questionEmbed.setColor(Colors.Red)],
+                });
                 i.reply({
                     content: "❌ Incorrect! Try again.",
                     ephemeral: true,
