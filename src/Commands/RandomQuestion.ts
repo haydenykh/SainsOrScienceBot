@@ -174,11 +174,23 @@ export default class TestCommand extends Command {
 
         const buttonCollector = reply.createMessageComponentCollector({
             componentType: ComponentType.Button,
-            filter: (i) => i.user.id === interaction.user.id,
+            filter: (i) =>
+                i.user.id === interaction.user.id ||
+                i.user.id !== interaction.user.id,
+            time: 30_000,
         });
 
         buttonCollector.on("collect", async (i) => {
+            if (i.user.id !== interaction.user.id) {
+                await i.reply({
+                    content: `This is <@!${interaction.user.id}>'s button. You wanna try it out too? Run this command (</random:1276458136252842029>).`,
+                    ephemeral: true,
+                });
+                return;
+            }
+
             const id = i.customId;
+
             if (id === "hint") {
                 i.reply({
                     content: randomQuestion.hint
@@ -189,26 +201,6 @@ export default class TestCommand extends Command {
                 return;
             }
             if (id === correctAnswerId) {
-                const disabledRow =
-                    new ActionRowBuilder<ButtonBuilder>().addComponents(
-                        choicesButtonRow.components.map((button) =>
-                            ButtonBuilder.from(button)
-                                .setDisabled(true)
-                                .setStyle(ButtonStyle.Success)
-                        )
-                    );
-                const disabledHintRow =
-                    new ActionRowBuilder<ButtonBuilder>().addComponents(
-                        hintButtonRow.components.map((button) =>
-                            ButtonBuilder.from(button).setDisabled(true)
-                        )
-                    );
-
-                await reply.edit({
-                    embeds: [questionEmbed.setColor(Colors.Green)],
-                    components: [disabledRow, disabledHintRow],
-                });
-
                 await i
                     .reply({
                         content: `@everyone The correct answer was **${correctAnswerId.toUpperCase()}**.`,
@@ -217,11 +209,7 @@ export default class TestCommand extends Command {
                     .then((i_) => {
                         setTimeout(() => {
                             i_.delete();
-                        }, 10000);
-
-                        reply.edit({
-                            content: `> The correct answer was **${correctAnswerId?.toUpperCase()}**.`,
-                        });
+                        }, 10_000);
                     });
 
                 i.followUp({
@@ -229,6 +217,8 @@ export default class TestCommand extends Command {
                         "🎉 You got it correct! Rerun command? </random:1276458136252842029>",
                     ephemeral: true,
                 });
+
+                buttonCollector.stop();
             } else {
                 await reply.edit({
                     embeds: [questionEmbed.setColor(Colors.Red)],
@@ -238,6 +228,29 @@ export default class TestCommand extends Command {
                     ephemeral: true,
                 });
             }
+        });
+
+        buttonCollector.on("end", async () => {
+            const disabledRow =
+                new ActionRowBuilder<ButtonBuilder>().addComponents(
+                    choicesButtonRow.components.map((button) =>
+                        ButtonBuilder.from(button)
+                            .setDisabled(true)
+                            .setStyle(ButtonStyle.Success)
+                    )
+                );
+            const disabledHintRow =
+                new ActionRowBuilder<ButtonBuilder>().addComponents(
+                    hintButtonRow.components.map((button) =>
+                        ButtonBuilder.from(button).setDisabled(true)
+                    )
+                );
+
+            await reply.edit({
+                content: `The correct answer was **${correctAnswerId?.toUpperCase()}**.`,
+                embeds: [questionEmbed.setColor(Colors.Green)],
+                components: [disabledRow, disabledHintRow],
+            });
         });
     }
 }
