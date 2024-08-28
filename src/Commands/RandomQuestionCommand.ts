@@ -54,7 +54,7 @@ interface Choice {
     originalIndex: number;
 }
 
-export default class TestCommand extends Command {
+export default class RandomQuestionCommand extends Command {
     constructor(client: ExtendedClient) {
         super(client, {
             data: new SlashCommandBuilder()

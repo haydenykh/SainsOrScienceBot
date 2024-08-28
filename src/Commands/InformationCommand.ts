@@ -7,7 +7,7 @@ import Command from "../Base/Classes/Command.js";
 import ExtendedClient from "../Base/Classes/ExtendedClient.js";
 import Categories from "../Base/Enums/Categories.js";
 
-export default class TestCommand extends Command {
+export default class InformationCommand extends Command {
     constructor(client: ExtendedClient) {
         super(client, {
             data: new SlashCommandBuilder()
