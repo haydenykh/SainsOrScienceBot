@@ -4,7 +4,7 @@
 
 **SainsOrScience** is a bot whom provides
 
--   Sains / _Science_
+-   Sains / _Science_ (predominantly)
 -   Biologi / _Biology_ 🧬
 -   Fizik / _Physics_ 🍎
 -   Geografi / _Geography_ 🌋
@@ -13,7 +13,7 @@
 -   Kimia / _Chemistry_ 🧪
     ...
 
-quizzes from Malaysia's governmental secondary schools with both 🇲🇾 **Malay** and 🇬🇧 **English** language support.
+quizzes from Malaysia's governmental secondary schools with both 🇲🇾 **Malay (Bahasa Melayu)** and 🇬🇧 **English** language support.
 
 > Credits to [@SpikeThatMike](https://www.youtube.com/@spikethatmike)'s tutorial on YouTube for helping out with this project.
 
@@ -28,4 +28,4 @@ quizzes from Malaysia's governmental secondary schools with both 🇲🇾 **Mala
 
 ### Contribution
 
-Head over to the [pull requests](https://github.com/haydenykh/SainsOrScienceBot/pulls) page and help create more questions or fix errors.
+Head over to the [issues](https://github.com/haydenykh/SainsOrScienceBot/issues) page and help create more questions or fix errors.
