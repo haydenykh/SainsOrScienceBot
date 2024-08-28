@@ -204,16 +204,10 @@ export default class TestCommand extends Command {
                         )
                     );
 
-                await reply
-                    .edit({
-                        embeds: [questionEmbed.setColor(Colors.Green)],
-                        components: [disabledRow, disabledHintRow],
-                    })
-                    .then((i_) => {
-                        setTimeout(() => {
-                            i_.delete();
-                        }, 15000);
-                    });
+                await reply.edit({
+                    embeds: [questionEmbed.setColor(Colors.Green)],
+                    components: [disabledRow, disabledHintRow],
+                });
 
                 await i
                     .reply({
@@ -224,6 +218,10 @@ export default class TestCommand extends Command {
                         setTimeout(() => {
                             i_.delete();
                         }, 10000);
+
+                        reply.edit({
+                            content: `> The correct answer was **${correctAnswerId?.toUpperCase()}**.`,
+                        });
                     });
 
                 i.followUp({
