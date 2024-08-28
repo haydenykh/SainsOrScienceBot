@@ -30,7 +30,7 @@
     },
     "homepage": "https://github.com/haydenykh/SainsOrScienceBot#readme",
     "devDependencies": {
-        "@eslint/js": "^9.9.0",
+        "@eslint/js": "^9.9.1",
         "@types/node": "^22.5.1",
         "eslint": "^9.9.0",
         "globals": "^15.9.0",
