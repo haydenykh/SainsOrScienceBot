@@ -2,6 +2,31 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.7.0](https://github.com/haydenykh/SainsOrScienceBot/compare/v0.6.0...v0.7.0) (2024-08-28)
+
+
+### ⚠ BREAKING CHANGES
+
+* added an information command that tells you about the bot
+
+### 🔮 Style
+
+* added `approximately` text as it does not show the exact time & changed reply to ephemeral ([f9311ae](https://github.com/haydenykh/SainsOrScienceBot/commit/f9311aed445b7055e2655ef9056c76a65063c032))
+* changed text `page` to the direct link instead of the default text ([3a7c481](https://github.com/haydenykh/SainsOrScienceBot/commit/3a7c481ba4c2497a7526680ddfb6916aecdbd502))
+
+
+### 🔧 Bug Fixes
+
+* changed from pull requests page to issues page & added text: `Bahasa Melayu` ([7d29db4](https://github.com/haydenykh/SainsOrScienceBot/commit/7d29db436fd6bdebc989cddf37cb697fc8f47381))
+* removed delete embed feature and changed it to editing the embed instead. ([3de36c8](https://github.com/haydenykh/SainsOrScienceBot/commit/3de36c8312e922443d813f3c9bba02f32da674ef))
+* removed interaction ping as it does not function well ([17b5d61](https://github.com/haydenykh/SainsOrScienceBot/commit/17b5d610fb7a56ccb3a4b8cc74dd46eb4f50557a))
+
+
+### 🚀 Features
+
+* added an information command that tells you about the bot ([0e89f83](https://github.com/haydenykh/SainsOrScienceBot/commit/0e89f839e2e60c3d2d2a58b8fc00f31b04bdb4c1))
+* added better filter system where it sends a warning message to the user whom did not ran the command & moved the disable function in the "collection end" event ([2b3c968](https://github.com/haydenykh/SainsOrScienceBot/commit/2b3c96882e5baff8a43a345b3f01a688da566bd5))
+
 ## [0.6.0](https://github.com/haydenykh/SainsOrScienceBot/compare/v0.5.3...v0.6.0) (2024-08-25)
 
 
