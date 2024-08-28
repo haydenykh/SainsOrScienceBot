@@ -28,4 +28,4 @@ quizzes from Malaysia's governmental secondary schools with both 🇲🇾 **Mala
 
 ### Contribution
 
-Head over to the [issues](https://github.com/haydenykh/SainsOrScienceBot/issues) page and help create more questions or fix errors.
+Head over to the [issues page](https://github.com/haydenykh/SainsOrScienceBot/issues) and help create more questions or fix errors.
