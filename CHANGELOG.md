@@ -2,6 +2,27 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.7.1](https://github.com/haydenykh/SainsOrScienceBot/compare/v0.7.0...v0.7.1) (2024-08-28)
+
+
+### ⚠ BREAKING CHANGES
+
+* Added dependabot
+
+### 🔮 Style
+
+* added `governmental` text ([be1319c](https://github.com/haydenykh/SainsOrScienceBot/commit/be1319cd88d88471557b8134c0eed5df8b997082))
+
+
+### 🚀 Features
+
+* Added dependabot ([a5e08b4](https://github.com/haydenykh/SainsOrScienceBot/commit/a5e08b411e67874c07ae5e6cb10b74f0e5c2f5ae))
+
+
+### 🔧 Bug Fixes
+
+* moved `labels` property inside schema ([aadfdba](https://github.com/haydenykh/SainsOrScienceBot/commit/aadfdba70c447ef01e45f5d821daa2dde5a0cfbb))
+
 ## [0.7.0](https://github.com/haydenykh/SainsOrScienceBot/compare/v0.6.0...v0.7.0) (2024-08-28)
 
 
