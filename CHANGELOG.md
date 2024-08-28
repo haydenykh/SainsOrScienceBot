@@ -2,6 +2,33 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.7.2](https://github.com/haydenykh/SainsOrScienceBot/compare/v0.7.1...v0.7.2) (2024-08-28)
+
+
+### 🔮 Style
+
+* added `Command` prefix at the end of file name ([8a78fed](https://github.com/haydenykh/SainsOrScienceBot/commit/8a78fed7a9782860b10c592711e1a87b2e4d8669))
+
+
+### 🔧 Bug Fixes
+
+* changed `Test` to its respective name ([fee6eb5](https://github.com/haydenykh/SainsOrScienceBot/commit/fee6eb5cba0d2bc327c2f94797dc8cd749be9ecd))
+
+
+### 🖇️ Others
+
+* removed `hidden` property in `build` type ([b4826bb](https://github.com/haydenykh/SainsOrScienceBot/commit/b4826bbf26fa4d435ae3ee72f43d6d5f95255b25))
+
+
+### 🔧 Build System
+
+* updated packages ([35adfad](https://github.com/haydenykh/SainsOrScienceBot/commit/35adfadf54d4a12840c6f62f4c72a62d434013c8))
+
+
+### 🚀 Features
+
+* added options for `TOKEN`, `GITHUB_TOKEN` and `CLIENT_SECRET` ([f0dc2f9](https://github.com/haydenykh/SainsOrScienceBot/commit/f0dc2f9b7708c325b3de75c28721ae58e272b0e4))
+
 ### [0.7.1](https://github.com/haydenykh/SainsOrScienceBot/compare/v0.7.0...v0.7.1) (2024-08-28)
 
 
