@@ -30,11 +30,7 @@ export default class TestCommand extends Command {
             .then((i) => {
                 PingEmbed.setTitle("🏓 Pong!")
                     .setDescription(
-                        `Successfully retrieved latency of \`${
-                            this.client.ws.ping
-                        }ms\`.\nAlso retrieved interaction ping of \`${
-                            i.createdTimestamp - interaction.createdTimestamp
-                        }ms\``
+                        `Successfully retrieved latency of \`${this.client.ws.ping} ms\`.`
                     )
                     .setColor(Colors.Green)
                     .setTimestamp();
