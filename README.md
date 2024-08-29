@@ -19,6 +19,12 @@ quizzes from Malaysia's governmental secondary schools with both 🇲🇾 **Mala
 
 ---
 
+### Invite
+
+Click [me](https://discord.com/oauth2/authorize?client_id=1273933259905957941&scope=bot&permissions=1099511103185) if you want to invite to your server.
+
+---
+
 ### Features
 
 1. `/random <level> <subject>`
