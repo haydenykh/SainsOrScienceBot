@@ -6,6 +6,7 @@ import {
     Colors,
     ComponentType,
     EmbedBuilder,
+    Message,
     SlashCommandBuilder,
 } from "discord.js";
 import Command from "../Base/Classes/Command.js";
@@ -246,11 +247,28 @@ export default class RandomQuestionCommand extends Command {
                     )
                 );
 
-            await reply.edit({
-                content: `The correct answer was **${correctAnswerId?.toUpperCase()}**.`,
-                embeds: [questionEmbed.setColor(Colors.Green)],
-                components: [disabledRow, disabledHintRow],
-            });
+            try {
+                await reply.edit({
+                    content: `The correct answer was **${correctAnswerId?.toUpperCase()}**.`,
+                    embeds: [questionEmbed.setColor(Colors.Green)],
+                    components: [disabledRow, disabledHintRow],
+                });
+            } catch (e) {
+                const error = e as Error;
+                const stackedError = error.stack?.replaceAll(
+                    `haydenyong`,
+                    "***"
+                );
+                interaction.channel
+                    ?.send({
+                        content: `An error occurred:\n\`\`\`${stackedError}\`\`\``,
+                    })
+                    .then((r) => {
+                        setTimeout(() => {
+                            return r.delete() as Promise<Message<false>>;
+                        }, 7_000);
+                    });
+            }
         });
     }
 }
