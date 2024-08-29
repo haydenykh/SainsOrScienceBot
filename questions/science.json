@@ -140,7 +140,8 @@
                 ]
             },
             "difficulty": "R",
-            "chapter": "1"
+            "chapter": "1",
+            "type": "objective"
         },
         {
             "BI": {
@@ -187,7 +188,8 @@
             },
             "difficulty": "S",
             "chapter": "1",
-            "image": "https://raw.githubusercontent.com/haydenykh/SainsOrScienceBot/main/assets/images/science/f3/brain.jpg"
+            "image": "https://raw.githubusercontent.com/haydenykh/SainsOrScienceBot/main/assets/images/science/f3/brain.jpg",
+            "type": "objective"
         },
         {
             "BI": {
@@ -235,7 +237,8 @@
             "hint": "Apakah yang dibebaskan oleh lilin?\n*What do candles release?*",
             "difficulty": "R",
             "chapter": "1",
-            "image": "https://raw.githubusercontent.com/haydenykh/SainsOrScienceBot/main/assets/images/science/f3/involuntary_action_to_avoid_injury.jpg"
+            "image": "https://raw.githubusercontent.com/haydenykh/SainsOrScienceBot/main/assets/images/science/f3/involuntary_action_to_avoid_injury.jpg",
+            "type": "objective"
         },
         {
             "BI": {
@@ -282,7 +285,9 @@
             },
             "difficulty": "R",
             "chapter": "1",
-            "image": "https://raw.githubusercontent.com/haydenykh/SainsOrScienceBot/main/assets/images/science/f3/photoreceptors_found_in_the_retina.jpg"
+            "hint": "Setakat Tingkatan 3, hanya terdapat 2 fotoreseptor yang diajar, iaitu **sel rod** dan **sel kon**.\n_As of Form 3, there are only 2 photoreceptors that was taught and those are the **rod cells** and **cone cells**._",
+            "image": "https://raw.githubusercontent.com/haydenykh/SainsOrScienceBot/main/assets/images/science/f3/photoreceptors_found_in_the_retina.jpg",
+            "type": "objective"
         },
         {
             "BI": {
@@ -329,7 +334,9 @@
             },
             "difficulty": "R",
             "chapter": "1",
-            "image": "https://raw.githubusercontent.com/haydenykh/SainsOrScienceBot/main/assets/images/science/f3/tongue.jpg"
+            "hint": "Lidah terdiri daripada 5 kawasan rasa. Di kawasan `X`, kebanyakannya boleh berasa pahit.\n_The tongue consists of 5 taste areas. In area `X`, it can predominantly taste bitter._",
+            "image": "https://raw.githubusercontent.com/haydenykh/SainsOrScienceBot/main/assets/images/science/f3/tongue.jpg",
+            "type": "objective"
         },
         {
             "BI": {
@@ -375,7 +382,8 @@
                 ]
             },
             "difficulty": "S",
-            "chapter": "1"
+            "chapter": "1",
+            "type": "objective"
         },
         {
             "BI": {
@@ -422,7 +430,8 @@
             },
             "difficulty": "T",
             "chapter": "1",
-            "image": "https://raw.githubusercontent.com/haydenykh/SainsOrScienceBot/main/assets/images/science/f3/people_with_colds_lack_appetite.jpg"
+            "image": "https://raw.githubusercontent.com/haydenykh/SainsOrScienceBot/main/assets/images/science/f3/people_with_colds_lack_appetite.jpg",
+            "type": "objective"
         },
         {
             "BI": {
@@ -469,7 +478,9 @@
             },
             "difficulty": "S",
             "chapter": "1",
-            "image": "https://raw.githubusercontent.com/haydenykh/SainsOrScienceBot/main/assets/images/science/f3/roots_and_shoots_show_tropism_responses.jpg"
+            "hint": "Dalam imej, akar tumbuhan menghadap ke arah tertentu, yang kebanyakan tumbuhan tidak lakukan melainkan air hadir. Bagi pucuk tumbuhan, ia tumbuh ke atas dan bukannya ke bawah.\n_In the image, the plant's root is facing towards a specific direction, which most plants do not do unless water is present. As for the shoot of the plant, it's growing upwards instead of downwards._",
+            "image": "https://raw.githubusercontent.com/haydenykh/SainsOrScienceBot/main/assets/images/science/f3/roots_and_shoots_show_tropism_responses.jpg",
+            "type": "objective"
         },
         {
             "BI": {
@@ -516,7 +527,8 @@
             },
             "hint": "Haiwan yang penglihatan stereoskopik kebanyakannya adalah pemangsa.\n*Animals with stereoscopic vision are mostly predators.*",
             "difficulty": "R",
-            "chapter": "1"
+            "chapter": "1",
+            "type": "objective"
         },
         {
             "BI": {
@@ -563,7 +575,8 @@
             },
             "difficulty": "T",
             "chapter": "1",
-            "image": "https://raw.githubusercontent.com/haydenykh/SainsOrScienceBot/main/assets/images/science/f3/fishes_lateral_line.jpg"
+            "image": "https://raw.githubusercontent.com/haydenykh/SainsOrScienceBot/main/assets/images/science/f3/fishes_lateral_line.jpg",
+            "type": "objective"
         }
     ],
     "f4": [
