@@ -24,3 +24,13 @@ jobs:
               run: npm run githubActionStart
               env:
                   TOKEN: ${{ secrets.TOKEN }}
+            - name: Check for new commits today
+              id: check-new-commits
+              uses: adriangl/check-new-commits-action@v1
+              with:
+                  token: ${{ secrets.GITHUB_TOKEN }}
+                  seconds: 86400 # One day in seconds
+                  branch: "main"
+            - name: Exit code
+              if: ${{ steps.check-new-commits.outputs.has-new-commits == 'true' }}
+              run: exit 0
