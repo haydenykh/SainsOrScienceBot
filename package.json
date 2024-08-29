@@ -10,7 +10,7 @@
         "startMac": "npm run cleanMac && npm run build && npx tsc -w & npx nodemon build",
         "startWindows": "npm run cleanWindows && npm run build && npx tsc -w & npx nodemon build",
         "start": "npm run build && npx tsc -w & npx nodemon build",
-        "startNoWatch": "npm run build && node .",
+        "githubActionStart": "node .",
         "build": "npx tsc --build",
         "release": "npx standard-version"
     },

@@ -18,7 +18,9 @@ jobs:
                   node-version: "22.x"
             - name: Install dependencies
               run: npm i
+            - name: Build
+              run: npm run build
             - name: Run bot
-              run: npm run start
+              run: npm run githubActionStart
               env:
                   TOKEN: ${{ secrets.TOKEN }}
