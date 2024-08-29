@@ -39,3 +39,7 @@ Click [me](https://discord.com/oauth2/authorize?client_id=1273933259905957941&sc
 ### Contribution
 
 Head over to the [issues page](https://github.com/haydenykh/SainsOrScienceBot/issues) and help create more questions or fix errors.
+
+### License
+
+Uses the [ISC License](LICENSE).
