@@ -10,6 +10,7 @@
 -   Geografi / _Geography_ 🌋
 
     ~~- Matematik / _Mathematics_ 📐~~
+
     ~~- Matematik Tambahan / _Additional Mathematics_ 🔢~~
 
 -   Kimia / _Chemistry_ 🧪
