@@ -31,7 +31,7 @@ Click [me](https://discord.com/oauth2/authorize?client_id=1273933259905957941&sc
 
 ### Features
 
-1. `/random <level>`
+1. `/random <level: required>`
    Sends out a random question from the [questions list](questions.json) with the level option (Form 1, Form 2, Form 3, Form 4, Form 5).
 
 ---
