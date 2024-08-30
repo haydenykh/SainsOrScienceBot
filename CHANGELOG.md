@@ -2,6 +2,47 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.7.3](https://github.com/haydenykh/SainsOrScienceBot/compare/v0.7.2...v0.7.3) (2024-08-30)
+
+
+### 🖇️ Others
+
+* added bot invite link ([1bbc23e](https://github.com/haydenykh/SainsOrScienceBot/commit/1bbc23e90ae733976b1a8b23c4e638b24dc90651))
+* changed from bot invitation to server invitation ([c3b76f9](https://github.com/haydenykh/SainsOrScienceBot/commit/c3b76f91a0320f30c951424492739e25aa41dece))
+
+
+### 🔧 Bug Fixes
+
+* added `node` type in `types` array as it gave a `node 2` error before ([81e83b8](https://github.com/haydenykh/SainsOrScienceBot/commit/81e83b853213bdbbcf40b057acd5927c7dc6c4a1))
+* now exits workflow if new commits are detected ([6afe462](https://github.com/haydenykh/SainsOrScienceBot/commit/6afe4628475d21f59a45778f9e326f79de73384b))
+* refix `watch` ([98e31de](https://github.com/haydenykh/SainsOrScienceBot/commit/98e31de6702942f3a80539da9d64942fec51fc6a))
+* removed deploy workflow as it crashes after 6 hours ([f710ad2](https://github.com/haydenykh/SainsOrScienceBot/commit/f710ad22ab56643ba19817738b5ffa9af529ff7c))
+* removed mathematics and additional mathematics subject & remove `subject` parameter on `/random` command ([dbca960](https://github.com/haydenykh/SainsOrScienceBot/commit/dbca9606bb84b5bf3df2b60787ec4f0cef7a5646))
+* removed using watch ([859a444](https://github.com/haydenykh/SainsOrScienceBot/commit/859a4448146dcc1b13c1baf8e0188cd9a7531be5))
+* removed windows-compatibility scripts ([28ced58](https://github.com/haydenykh/SainsOrScienceBot/commit/28ced582991628f3b114ee10026379dcbb29c675))
+* sends out an error when editing the embed in the "collector `end`" event ([712cb13](https://github.com/haydenykh/SainsOrScienceBot/commit/712cb13d39a828088b2fcfe13eaf944ca802cfb8))
+
+
+### 🚀 Features
+
+* added .gitattributes file ([3de76de](https://github.com/haydenykh/SainsOrScienceBot/commit/3de76dec9f3cf9ac57fae5a7246f284e7a8aba6b))
+* added license ([dd824e7](https://github.com/haydenykh/SainsOrScienceBot/commit/dd824e7ee5faa9fc1a1900f27690eadb1803b6f6))
+* bot deploy workflow ([fc6cf61](https://github.com/haydenykh/SainsOrScienceBot/commit/fc6cf613ed188f26dde9756acf989525d5a9efce))
+
+
+### 🔮 Style
+
+* added `Bahasa Melayu` text next to `Malay` ([30e588f](https://github.com/haydenykh/SainsOrScienceBot/commit/30e588f22a6d6b323b6964d69a62a5ab5a57b174))
+* added `required` for the `level` parameter in `/random` command as it is required & changed grammar spelling from `Invite` to `Invitation` ([83a073b](https://github.com/haydenykh/SainsOrScienceBot/commit/83a073b18655b337eebab05f15e4c17675913ccf))
+* added hints to some questions & added `type` property where it can be `objective` or `structural` ([530de9f](https://github.com/haydenykh/SainsOrScienceBot/commit/530de9fa2c63a3ad42f99cc70508a635f0e13646))
+* added horizontal rule after contribution heading ([23b9642](https://github.com/haydenykh/SainsOrScienceBot/commit/23b9642e7af1366d738a488c16e74bb2455bba4a))
+* added text `Bahasa` and `Melayu` as ignored in code spelling checker extension ([fd1301f](https://github.com/haydenykh/SainsOrScienceBot/commit/fd1301f81d08b90e190969ff124d1c03a74f1662))
+* fix spelling from `Invite` to `Invitation` ([3eac1de](https://github.com/haydenykh/SainsOrScienceBot/commit/3eac1dee3d254a1ba5a7494cbaf0fe14c25d9fdc))
+* fixed ([b795f39](https://github.com/haydenykh/SainsOrScienceBot/commit/b795f3909d10941c27d9e4d0ac97e6417746d344))
+* formatted Features section & changed from headings 3 to headings 2 & changed from `tutorial` to `TypeScript Discord.JS Series` ([e5cb046](https://github.com/haydenykh/SainsOrScienceBot/commit/e5cb046cc8a05c090911a31bef29314af1f4d434))
+* refix "next line" format ([254b134](https://github.com/haydenykh/SainsOrScienceBot/commit/254b1349c88b77a2d6666a72562047719dd0ea14))
+* removed horizontal rule & formatted Description section ([3998cef](https://github.com/haydenykh/SainsOrScienceBot/commit/3998cef55c518b93c5d5e3da49e10b53eecf92bf))
+
 ### [0.7.2](https://github.com/haydenykh/SainsOrScienceBot/compare/v0.7.1...v0.7.2) (2024-08-28)
 
 
