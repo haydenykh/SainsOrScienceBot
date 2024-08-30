@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.8.0](https://github.com/haydenykh/SainsOrScienceBot/compare/v0.7.3...v0.8.0) (2024-08-30)
+
+
+### 🔮 Style
+
+* added `-` ([4fde28f](https://github.com/haydenykh/SainsOrScienceBot/commit/4fde28ff5ab0a2139693e59c8f9c5b89ee991d93))
+
+
+### 🔧 Bug Fixes
+
+* removed `GITHUB_TOKEN` and `CLIENT_SECRET` as it is not used & **THE PREVIOUS VERSION `0.7.3` WAS SUPPOSE TO BE `0.8.0`. IT WAS INCORRECTLY VERSION ED** ([951efd6](https://github.com/haydenykh/SainsOrScienceBot/commit/951efd6ca61a6b7c1268600fac36a6d7eae5e99f))
+
 ### [0.7.3](https://github.com/haydenykh/SainsOrScienceBot/compare/v0.7.2...v0.7.3) (2024-08-30)
 
 
