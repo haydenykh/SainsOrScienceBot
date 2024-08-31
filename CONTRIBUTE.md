@@ -49,7 +49,7 @@ Example:
 
 ### Structural FITB type
 
-The structural FITB (fill in the blanks) type is a type where you have to fill in the blanks of an uncompleted statement.
+The structural FITB (fill in the blanks) type is a type where you have to fill in the blanks of an incomplete statement.
 
 Example:
 
