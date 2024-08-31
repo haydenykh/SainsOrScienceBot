@@ -6,8 +6,8 @@
     "type": "module",
     "scripts": {
         "clean": "rm -rf dist",
-        "startNoClean": "npm run clean && npm run build && npx tsc -w & npx nodemon build",
-        "start": "npm run build && npx tsc -w & npx nodemon build",
+        "start": "npm run clean && npm run build && npx tsc -w & npx nodemon build",
+        "startNoClean": "npm run build && npx tsc -w & npx nodemon build",
         "build": "npx tsc --build",
         "release": "npx standard-version"
     },
