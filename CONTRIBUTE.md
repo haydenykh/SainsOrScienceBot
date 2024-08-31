@@ -10,7 +10,7 @@ For the **title**, you can put anything you want such as **New question**, **\<A
 
 For the **description** box, put in what you would like to add. For instance, you want to add new questions to the bot. In there, put on **3** things. First, **the question**, either BM or BI. Second, **the choices** & **the answer** for it. Third, **the question type**. The question type can be [`objective`](#objective-type), [`structural_write`](#structural-write-type), [`structural_fitb`](#structural-fitb-type) or [`structural_tick`](#structural-tick-type). You can also provide an image (must be in `png` or `jpg` format) and a hint.
 
-You can also assign labels such as `feature`, `bug`, etc. You can leave it blanks as contributors or the owner will assign it themselves.
+You can also assign labels such as `feature`, `bug`, etc. You can leave it blank as contributors or the owner will assign it themselves.
 
 Then you can submit it!
 
