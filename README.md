@@ -30,6 +30,7 @@ Join [**Hello World** on Discord](https://discord.gg/t7CMXRWs7G) if you want to 
 ## Contribution
 
 Head over to the [issues page](https://github.com/haydenykh/SainsOrScienceBot/issues) and help create more questions or fix errors.
+Read more at the [CONTRIBUTE.md file](CONTRIBUTE.md).
 
 ## License
 
