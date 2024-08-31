@@ -57,7 +57,7 @@ Example:
 
 The structural tick type is a type where it gives a statement you have to tell whether its true or false.
 
-Example.
+Example:
 
 1. Down syndrome has extra chromosome in chromosome number 21. ( ✓ )
 2. Healthy manoeuvre is caused by drowning, lightning strike and electric shock. ( ✗ )
