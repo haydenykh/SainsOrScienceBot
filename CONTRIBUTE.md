@@ -6,9 +6,13 @@ If you are willing to contribute this repository/project, head over to the [issu
 
 Click on the "**New issue**" button. In there, you will find two spaces that you can fill in.
 
-For the **title**, you can put anything you want such as **New question**, **\<a random error\>**, etc.
+For the **title**, you can put anything you want such as **New question**, **\<A random error\>**, etc.
 
 For the **description** box, put in what you would like to add. For instance, you want to add new questions to the bot. In there, put on **3** things. First, **the question**, either BM or BI. Second, **the choices** & **the answer** for it. Third, **the question type**. The question type can be [`objective`](#objective-type), [`structural_write`](#structural-write-type), [`structural_fitb`](#structural-fitb-type) or [`structural_tick`](#structural-tick-type). You can also provide an image (must be in `png` or `jpg` format) and a hint.
+
+You can also assign labels such as `feature`, `bug`, etc. You can leave it blanks as contributors or the owner will assign it themselves.
+
+Then you can submit it!
 
 ---
 
@@ -18,7 +22,7 @@ The objective type is choices with its respective answers in alphabetical order.
 
 Example:
 
-<ins>What is the characteristics of the plant cell?</ins>
+<ins>What is the characteristics of a plant cell?</ins>
 
 _A. Doesn't have a cell wall._
 
@@ -45,7 +49,7 @@ Example:
 
 ### Structural FITB type
 
-The structural fitb (fill in the blanks) type is a type where you have to fill in the blanks of a statement.
+The structural FITB (fill in the blanks) type is a type where you have to fill in the blanks of an uncompleted statement.
 
 Example:
 
