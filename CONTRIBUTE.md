@@ -20,13 +20,13 @@ Example:
 
 <ins>What is the characteristics of the plant cell?</ins>
 
-_A. Doesn't have cell wall._
+_A. Doesn't have a cell wall._
 
 _B. Has more than one nucleus._
 
 **C. Has a fixed shape.**
 
-_D. Doesn't have chloroplast_
+_D. Doesn't have a chloroplast._
 
 _E. …_
 
