@@ -18,17 +18,17 @@ The objective type is choices with its respective answers in alphabetical order.
 
 Example:
 
-What is the characteristics of the plant cell?
+<ins>What is the characteristics of the plant cell?</ins>
 
-A. Doesn't have cell wall.
+_A. Doesn't have cell wall._
 
-B. Has more than one nucleus.
+_B. Has more than one nucleus._
 
 **C. Has a fixed shape.**
 
-D. Doesn't have chloroplast
+_D. Doesn't have chloroplast_
 
-E. …
+_E. …_
 
 ### Structural Write type
 
@@ -36,12 +36,12 @@ The structural write type is a type where you have to write points/answers in sh
 
 Example:
 
-What are the characteristics of an asteroid?
+<ins>What are the characteristics of an asteroid?</ins>
 
 -   **Size starts from 1 m to 1000 km**
 -   **Made up of stones and metals**
 -   **Has a cold surface temperature, approximately -73°C**
--   Travels at varying speed
+-   _Travels at varying speed_
 
 ### Structural FITB type
 
