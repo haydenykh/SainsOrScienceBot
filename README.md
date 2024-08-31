@@ -17,7 +17,7 @@ quizzes from Malaysia's governmental secondary schools with both 🇲🇾 **Mala
 
 > Credits to [@SpikeThatMike](https://www.youtube.com/@spikethatmike)'s **TypeScript Discord.JS Series** on YouTube for helping out with this project.
 
-## Invitation
+## Usage
 
 Join [**Hello World** on Discord](https://discord.gg/t7CMXRWs7G) if you want to use it.
 
