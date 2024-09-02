@@ -13,7 +13,7 @@ export default class InformationCommand extends Command {
             data: new SlashCommandBuilder()
                 .setName("info")
                 .setDescription("I'll tell you a bit of myself."),
-            category: Categories.Miscellaneous,
+            category: Categories.Information,
             cooldown: 5,
         });
     }
