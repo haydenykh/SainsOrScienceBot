@@ -2,6 +2,48 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.8.1](https://github.com/haydenykh/SainsOrScienceBot/compare/v0.8.0...v0.8.1) (2024-09-03)
+
+
+### 🔧 Bug Fixes
+
+* flipped `start` script and `startNoClean` script ([5e9945e](https://github.com/haydenykh/SainsOrScienceBot/commit/5e9945e84437494cc6688250ddc5e37d8d578966))
+* switch from `daily` to `weekly` ([191e122](https://github.com/haydenykh/SainsOrScienceBot/commit/191e122683bccf763138b930de2f4c078312783e))
+
+
+### 🔧 Build System
+
+* updated packages ([a9e2df9](https://github.com/haydenykh/SainsOrScienceBot/commit/a9e2df985dcd15b9b08cf3adcebdb531852e89b8))
+
+
+### 🚀 Features
+
+* added contribution details ([a6eb209](https://github.com/haydenykh/SainsOrScienceBot/commit/a6eb2097b10cb1073fc79c0e378860416c22b6ae))
+* todo file ([c75322a](https://github.com/haydenykh/SainsOrScienceBot/commit/c75322aff1222c076951bb4c21bbcd055508d5c3))
+
+
+### 🔮 Style
+
+* added `-` ([8d17342](https://github.com/haydenykh/SainsOrScienceBot/commit/8d173423a60261e106fe1ef5e5ab3111feccd0fd))
+* added italics to differentiate between incorrect and correct answers ([116799a](https://github.com/haydenykh/SainsOrScienceBot/commit/116799aff37653153b15008b21b8c3caded61d73))
+* formatting ([7c1e16d](https://github.com/haydenykh/SainsOrScienceBot/commit/7c1e16dcd18daa2f5258256da305e5abad8fe1e0))
+* styling fix [#2](https://github.com/haydenykh/SainsOrScienceBot/issues/2) ([65b8737](https://github.com/haydenykh/SainsOrScienceBot/commit/65b8737ef0f7434afcab2ce3dd825be64cedb23c))
+* styling fixes ([ae3e5ff](https://github.com/haydenykh/SainsOrScienceBot/commit/ae3e5ffa6568730ca6d3585fb52273777e9bf6e8))
+
+
+### 🖇️ Others
+
+* added `hydrotropism` to code spelling checker extension ([aa849c3](https://github.com/haydenykh/SainsOrScienceBot/commit/aa849c3021677326e6adcc0eb99daf8741f3800e))
+* added a few more steps ([cc8032e](https://github.com/haydenykh/SainsOrScienceBot/commit/cc8032e888f5069e78ebb222627e206a8d9ca17e))
+* changed from `.` to `:` ([cfa43b5](https://github.com/haydenykh/SainsOrScienceBot/commit/cfa43b57f8a27594f4bd423e3180133cbd2725b8))
+* changed from `Invitation` to `Usage` ([2e6127e](https://github.com/haydenykh/SainsOrScienceBot/commit/2e6127ed580119b06b65c8ce6029f231d27e498f))
+* fixed grammar issues ([30c6a0c](https://github.com/haydenykh/SainsOrScienceBot/commit/30c6a0c280b01dc4abfe5368e4452af52ff7838e))
+* fixed grammar of `blanks` to `blank` ([a6ed08f](https://github.com/haydenykh/SainsOrScienceBot/commit/a6ed08f5da9682be3bfc02987abdd8e71f72253b))
+* fixed grammar of `uncompleted` to `incomplete` ([05194a0](https://github.com/haydenykh/SainsOrScienceBot/commit/05194a0fbb1c8548e13c1b11123a966cdbf933c2))
+* fixed todo.md grammar issues ([c31fe0c](https://github.com/haydenykh/SainsOrScienceBot/commit/c31fe0cf36a964a748d51720930f1e8e4c580624))
+* grammar issues ([3302277](https://github.com/haydenykh/SainsOrScienceBot/commit/3302277c4d45632150821b3fdeaa3d8f60a4d51e))
+* switched Information command category from Miscellaneous to Information ([f892188](https://github.com/haydenykh/SainsOrScienceBot/commit/f89218832af49fa782699c6a508db008582d6791))
+
 ## [0.8.0](https://github.com/haydenykh/SainsOrScienceBot/compare/v0.7.3...v0.8.0) (2024-08-30)
 
 
