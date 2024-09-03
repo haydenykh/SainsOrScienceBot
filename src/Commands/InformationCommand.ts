@@ -33,7 +33,7 @@ export default class InformationCommand extends Command {
         const infoEmbed = new EmbedBuilder()
             .setTitle(`👋 Hi,`)
             .setDescription(
-                `- I am a bot whom provides predominantly science quizzes from Malaysia's governmental secondary schools with both :flag_my: **Malay (Bahasa Melayu)** and :flag_gb: **English** support.\n- I was created by [@haydenykh](https://discord.com/users/900561055472840724) using TypeScript.\n- If you want to add new questions or fix my errors, head to the [issues page](https://github.com/haydenykh/SainsOrScienceBot/issues).\n- I was also created on ${clientCreatedAt.toLocaleDateString(
+                `- I am a bot whom provides predominantly science quizzes from Malaysia's governmental secondary schools with both :flag_my: **Malay (Bahasa Melayu)** and :flag_gb: **English** support.\n- I was created by [@haydenykh](https://discord.com/users/900561055472840724) using TypeScript.\n- If you want to add new questions or fix my errors, head to the [CONTRIBUTION.md file](https://github.com/haydenykh/SainsOrScienceBot/blob/main/CONTRIBUTE.md).\n- I was also created on ${clientCreatedAt.toLocaleDateString(
                     "en-GB"
                 )}, that was approximately ${differenceInDays} days ago.`
             )
