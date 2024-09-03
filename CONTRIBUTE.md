@@ -2,13 +2,13 @@
 
 ## How to contribute?
 
-If you are willing to contribute this repository/project, head over to the [issues page](https://github.com/haydenykh/SainsOrScienceBot/issues).
+If you are willing to contribute to this repository/project, head over to the [issues page](https://github.com/haydenykh/SainsOrScienceBot/issues).
 
 Click on the "**New issue**" button. In there, you will find two spaces that you can fill in.
 
 For the **title**, you can put anything you want such as **New question**, **\<A random error\>**, etc.
 
-For the **description** box, put in what you would like to add. For instance, you want to add new questions to the bot. In there, put on **3** things. First, **the question**, either BM or BI. Second, **the choices** & **the answer** for it. Third, **the question type**. The question type can be [`objective`](#objective-type), [`structural_write`](#structural-write-type), [`structural_fitb`](#structural-fitb-type) or [`structural_tick`](#structural-tick-type). You can also provide an image (must be in `png` or `jpg` format) and a hint.
+For the **description** box, put in what you would like to add. For instance, you'd like to add new questions to the bot. In there, put on **3** things. First, **the question**, either BM or BI. Second, **the choices** & **the answer** for it. Third, **the question type**. The question type can be [`objective`](#objective-type), [`structural_write`](#structural-write-type), [`structural_fitb`](#structural-fitb-type) or [`structural_tick`](#structural-tick-type). You can also provide an image (must be in `png` or `jpg` format) and a hint.
 
 You can also assign labels such as `feature`, `bug`, etc. You can leave it blank as contributors or the owner will assign it themselves.
 
@@ -18,11 +18,11 @@ Then you can submit it!
 
 ### Objective type
 
-The objective type is choices with its respective answers in alphabetical order.
+The objective type is a type with multiple choices with its respective answer in alphabetical order (A, B, C, D, …). It's less likely to have an E option or more.
 
 Example:
 
-<ins>What is the characteristics of a plant cell?</ins>
+<ins>Plant cells has many characteristics in it. Name one of the characteristics.</ins>
 
 _A. Doesn't have a cell wall._
 
@@ -59,11 +59,11 @@ Example:
 
 ### Structural Tick type
 
-The structural tick type is a type where it gives a statement you have to tell whether its true or false.
+The structural tick type gives a statement and you have to tell whether it's true or false.
 
 Example:
 
-1. Down syndrome has extra chromosome in chromosome number 21. ( ✓ )
-2. Healthy manoeuvre is caused by drowning, lightning strike and electric shock. ( ✗ )
+1. Down syndrome has an extra chromosome in chromosome number 21. ( ✓ )
+2. A healthy manoeuvre is caused by drowning, lightning strikes and electric shocks. ( ✗ )
 3. The general formula for alkane hydrocarbon is $\text{C}\_{n}\text{H}\_{2n+2}$. ( True )
 4. The size of a fungi microorganism is $0.2 \mu \text{m}$ to $10 \mu \text{m}$. ( False )
