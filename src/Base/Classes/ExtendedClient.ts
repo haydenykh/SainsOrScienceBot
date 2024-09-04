@@ -7,6 +7,7 @@ import Handler from "./Handler.js";
 import { createRequire } from "node:module";
 import Command from "./Command.js";
 import SubCommand from "./SubCommand.js";
+import logger from "../../Logger.js";
 const require = createRequire(import.meta.url);
 
 export default class ExtendedClient extends Client implements IExtendedClient {
@@ -38,7 +39,7 @@ export default class ExtendedClient extends Client implements IExtendedClient {
 
         this.login(process.env.TOKEN)
             .then(() => {
-                console.log(
+                logger.info(
                     chalk.bgGreenBright(" # ") +
                         chalk.greenBright(" Logged in to client.")
                 );

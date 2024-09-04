@@ -8,6 +8,7 @@ import chalk from "chalk";
 import { createRequire } from "node:module";
 import Command from "./Command.js";
 import SubCommand from "./SubCommand.js";
+import logger from "../../Logger.js";
 const require = createRequire(import.meta.url);
 
 export default class Handler implements IHandler {
@@ -28,7 +29,7 @@ export default class Handler implements IHandler {
             if (!event.name)
                 return (
                     delete require.cache[require.resolve(file)] &&
-                    console.log(
+                    logger.error(
                         chalk.bgRedBright(" ! ") +
                             chalk.redBright(
                                 ` ${file
@@ -65,7 +66,7 @@ export default class Handler implements IHandler {
             if (!command.data.name)
                 return (
                     delete require.cache[require.resolve(file)] &&
-                    console.log(
+                    logger.error(
                         chalk.bgRedBright(" ! ") +
                             chalk.redBright(
                                 ` ${file

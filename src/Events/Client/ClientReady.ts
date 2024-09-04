@@ -10,6 +10,7 @@ import Event from "../../Base/Classes/Event.js";
 import ExtendedClient from "../../Base/Classes/ExtendedClient.js";
 import chalk from "chalk";
 import Command from "../../Base/Classes/Command.js";
+import logger from "../../Logger.js";
 
 export default class Ready extends Event {
     constructor(client: ExtendedClient) {
@@ -20,7 +21,7 @@ export default class Ready extends Event {
     }
 
     async Execute() {
-        console.log(
+        logger.info(
             chalk.bgGreenBright(" # ") +
                 chalk.greenBright(` ${this.client.user?.tag} is ready!`)
         );
@@ -45,7 +46,7 @@ export default class Ready extends Event {
             }
         )) as APIApplicationCommand[];
 
-        console.log(
+        logger.info(
             chalk.bgGreenBright(" # ") +
                 chalk.greenBright(
                     ` Successfully set ${setCommands.length} commands.`
