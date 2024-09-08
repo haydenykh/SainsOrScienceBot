@@ -94,7 +94,7 @@ export default class RandomQuestionCommand extends Command {
         const hintRow = new ActionRowBuilder<ButtonBuilder>().addComponents(
             new ButtonBuilder()
                 .setCustomId("hint")
-                .setEmoji({ id: "309467336274870274" })
+                .setEmoji({ id: "885065115722981427" })
                 .setLabel("Hint")
                 .setStyle(ButtonStyle.Secondary)
         );
@@ -114,11 +114,6 @@ export default class RandomQuestionCommand extends Command {
         reply = await interaction.reply({
             content: "Generating random question…",
         });
-        // .then((i) => {
-        //     setTimeout(() => {
-        //         i.delete();
-        //     }, 2_000);
-        // })
 
         const questions = await loadFiles(subject, level);
         const filteredQuestions: Question[] = questions.map((q: Question) => q);
@@ -284,12 +279,7 @@ export default class RandomQuestionCommand extends Command {
                                 )
                                 .setColor(Colors.Green),
                         ],
-                    }).then((r) => {
-                        setTimeout(() => {
-                            r.delete();
-                        }, 8_000);
                     });
-
                     collector.stop();
                 } else if (customId == "hint") {
                     i.reply({
@@ -314,10 +304,6 @@ export default class RandomQuestionCommand extends Command {
                                 .setDescription(`<@!${i.user.id}>, try again!`)
                                 .setColor(Colors.Red),
                         ],
-                    }).then((r) => {
-                        setTimeout(() => {
-                            r.delete();
-                        }, 4_000);
                     });
                 }
             });
@@ -388,14 +374,13 @@ async function loadFiles(subject: Subject, level: Level) {
                 "Questions"
             )}/${subject}/${level}/*.js`
         )
-    )
-        .map((filePath) => path.resolve(filePath))
-        .sort((a, b) => {
-            const numA = parseInt(path.basename(a, ".js").match(/\d+/)![0], 10);
-            const numB = parseInt(path.basename(b, ".js").match(/\d+/)![0], 10);
+    ).map((filePath) => path.resolve(filePath));
+    // .sort((a, b) => {
+    //     const numA = parseInt(path.basename(a, ".js").match(/\d+/)![0], 10);
+    //     const numB = parseInt(path.basename(b, ".js").match(/\d+/)![0], 10);
 
-            return numA - numB;
-        });
+    //     return numA - numB;
+    // });
 
     const questions = await Promise.all(
         files.map(async (file: string) => {
