@@ -1,58 +1,51 @@
 import {
     ActionRowBuilder,
     ButtonBuilder,
+    ButtonInteraction,
     ButtonStyle,
     ChatInputCommandInteraction,
+    Collection,
     Colors,
     ComponentType,
     EmbedBuilder,
-    Message,
+    ModalActionRowComponentBuilder,
+    ModalBuilder,
     SlashCommandBuilder,
 } from "discord.js";
 import Command from "../Base/Classes/Command.js";
 import ExtendedClient from "../Base/Classes/ExtendedClient.js";
 import Categories from "../Base/Enums/Categories.js";
-import { readFileSync } from "node:fs";
+import { glob } from "glob";
+import path from "node:path";
+import { fileURLToPath } from "url";
+import Question from "../Base/Classes/Question.js";
+import { QuestionLanguage, QuestionType } from "../Base/Enums/QuestionEnums.js";
+import {
+    ObjectiveQuestionChoices,
+    TickQuestionChoices,
+    WriteQuestionChoices,
+    FITBQuestionChoices,
+} from "../Base/Interfaces/IQuestionData.js";
 import ShuffleArray from "../Functions/ShuffleArray.js";
+import ShuffleMap from "../Functions/ShuffleMap.js";
 
-const scienceJsonString = readFileSync("questions/science.json", "utf-8");
-const ScienceQuestions = JSON.parse(scienceJsonString);
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
-type QuestionObject = [
-    {
-        BI: {
-            question: string;
-            choices: [
-                {
-                    choice: string;
-                    isAnswer: boolean;
-                }
-            ];
-        };
-        BM: {
-            question: string;
-            choices: [
-                {
-                    choice: string;
-                    isAnswer: boolean;
-                }
-            ];
-        };
-        difficulty: number;
-        chapter: string;
-        hint?: string;
-        image?: string;
-    }
-];
-enum Language {
-    BI = "BI",
-    BM = "BM",
+enum Level {
+    Form1 = "f1",
+    Form2 = "f2",
+    Form3 = "f3",
+    Form4 = "f4",
+    Form5 = "f5",
 }
-interface Choice {
-    label: string;
-    bmChoice: string;
-    biChoice: string;
-    originalIndex: number;
+
+enum Subject {
+    Science = "science",
+    Biology = "biology",
+    Physics = "physics",
+    Geography = "geography",
+    Chemistry = "chemistry",
 }
 
 export default class RandomQuestionCommand extends Command {
@@ -73,202 +66,345 @@ export default class RandomQuestionCommand extends Command {
                             { name: "Form 5", value: "f5" },
                         ])
                         .setRequired(true)
+                )
+                .addStringOption((option) =>
+                    option
+                        .setName("subject")
+                        .setDescription("The subject.")
+                        .addChoices([
+                            { name: "Science", value: "science" },
+                            { name: "Biology", value: "biology" },
+                            { name: "Physics", value: "physics" },
+                            { name: "Geography", value: "geography" },
+                            { name: "Chemistry", value: "chemistry" },
+                        ])
+                        .setRequired(true)
                 ),
             category: Categories.Utilities,
-            cooldown: 2.5,
+            cooldown: 2,
         });
     }
     async Execute(interaction: ChatInputCommandInteraction) {
         const { options } = interaction;
-        const level = options.getString("level", true);
+        const level = options.getString("level", true) as Level;
+        const subject = options.getString("subject", true) as Subject;
 
-        const filteredQuestions: QuestionObject = ScienceQuestions[level].map(
-            (q: QuestionObject) => q
+        const embed = new EmbedBuilder().setTitle("Random Question");
+        const answerRow = new ActionRowBuilder<ButtonBuilder>();
+        const hintRow = new ActionRowBuilder<ButtonBuilder>().addComponents(
+            new ButtonBuilder()
+                .setCustomId("hint")
+                .setEmoji({ id: "309467336274870274" })
+                .setLabel("Hint")
+                .setStyle(ButtonStyle.Secondary)
         );
+
+        let reply;
+
+        if (!(level == Level.Form4 || level == Level.Form5)) {
+            if (!(subject == Subject.Science || subject == Subject.Geography)) {
+                reply = await interaction.reply({
+                    content:
+                        "You are not eligible to use this command with certain parameters, please try again.",
+                    ephemeral: true,
+                });
+            }
+        }
+
+        reply = await interaction.reply({
+            content: "Generating random question…",
+        });
+        // .then((i) => {
+        //     setTimeout(() => {
+        //         i.delete();
+        //     }, 2_000);
+        // })
+
+        const questions = await loadFiles(subject, level);
+        const filteredQuestions: Question[] = questions.map((q: Question) => q);
         const randomQuestion =
-            filteredQuestions[
-                Math.floor(Math.random() * filteredQuestions.length)
-            ];
+            filteredQuestions[Math.floor(Math.random() * questions.length)];
 
-        let correctAnswerId: string | null = null;
+        if (!randomQuestion) {
+            return reply.edit({
+                content: `No questions has been added to this subject and/or level.\n\n> If you would like to add one, head over to [the GitHub page](https://github.com/haydenykh/SainsOrScienceBot)'s [CONTRIBUTE.md file](https://github.com/haydenykh/SainsOrScienceBot/blob/main/CONTRIBUTE.md). You'll find mostly everything you need in there.`,
+            });
+        }
 
-        const choiceOptions = ["A", "B", "C", "D"];
+        embed
+            .setTitle("⁉️ Random Question")
+            .setThumbnail(randomQuestion.image ? randomQuestion.image : null)
+            .setColor("Random")
+            .setAuthor({
+                name: randomQuestion.credits!,
+            })
+            .setFooter({
+                text: `Difficulty: ${randomQuestion.difficulty} | Chapter: ${
+                    randomQuestion.chapter
+                } | Type: ${
+                    randomQuestion.type
+                        .replaceAll(/_+/g, " ")
+                        .charAt(0)
+                        .toUpperCase() +
+                    randomQuestion.type
+                        .replaceAll(/_+/g, " ")
+                        .slice(1, randomQuestion.type.length)
+                        .toLowerCase()
+                }`,
+            })
+            .setDescription(
+                `${randomQuestion.BM.question}\n_${randomQuestion.BI.question}_`
+            );
 
-        const choicesButtonRow =
-            new ActionRowBuilder<ButtonBuilder>().addComponents(
-                choiceOptions.map((choice) =>
+        const filter = (i: ButtonInteraction) =>
+            i.user.id == interaction.user.id;
+
+        const collector = interaction.channel!.createMessageComponentCollector({
+            componentType: ComponentType.Button,
+            filter,
+            time: 25_000,
+        });
+
+        if (randomQuestion.type == QuestionType.Objective) {
+            const alphabets_choices = ["A", "B", "C", "D"];
+
+            const biChoices = randomQuestion.BI
+                .choices as ObjectiveQuestionChoices;
+            const bmChoices = randomQuestion.BM
+                .choices as ObjectiveQuestionChoices;
+            const mergeChoices = new Collection<
+                string,
+                ObjectiveQuestionChoices
+            >();
+            mergeChoices.set("bm", bmChoices);
+            mergeChoices.set("bi", biChoices);
+
+            const first: ObjectiveQuestionChoices = [];
+            const second: ObjectiveQuestionChoices = [];
+            const third: ObjectiveQuestionChoices = [];
+            const fourth: ObjectiveQuestionChoices = [];
+            const list: ObjectiveQuestionChoices[] = [];
+            mergeChoices.map((choices, key) => {
+                switch (key) {
+                    case "bm":
+                        first.push(choices[0]);
+                        second.push(choices[1]);
+                        third.push(choices[2]);
+                        fourth.push(choices[3]);
+                        break;
+                    case "bi":
+                        first.push(choices[0]);
+                        second.push(choices[1]);
+                        third.push(choices[2]);
+                        fourth.push(choices[3]);
+                        break;
+                    default:
+                        break;
+                }
+            });
+
+            list.push(first, second, third, fourth);
+
+            let correctAnswerId: string;
+
+            const shuffledArray = ShuffleArray(list);
+
+            const listWithAlphabetChoices = new Map<
+                string,
+                ObjectiveQuestionChoices
+            >();
+            listWithAlphabetChoices.set(alphabets_choices[0], shuffledArray[0]);
+            listWithAlphabetChoices.set(alphabets_choices[1], shuffledArray[1]);
+            listWithAlphabetChoices.set(alphabets_choices[2], shuffledArray[2]);
+            listWithAlphabetChoices.set(alphabets_choices[3], shuffledArray[3]);
+
+            const choice1 = Array.from(listWithAlphabetChoices.entries())[0];
+            const choice2 = Array.from(listWithAlphabetChoices.entries())[1];
+            const choice3 = Array.from(listWithAlphabetChoices.entries())[2];
+            const choice4 = Array.from(listWithAlphabetChoices.entries())[3];
+
+            if (choice1[1][0]["is_objective_answer"] == true) {
+                correctAnswerId = choice1[0].toLowerCase();
+            } else if (choice2[1][0]["is_objective_answer"] == true) {
+                correctAnswerId = choice2[0].toLowerCase();
+            } else if (choice3[1][0]["is_objective_answer"] == true) {
+                correctAnswerId = choice3[0].toLowerCase();
+            } else if (choice4[1][0]["is_objective_answer"] == true) {
+                correctAnswerId = choice4[0].toLowerCase();
+            }
+
+            embed.addFields([
+                {
+                    name: `${choice1[0]}`,
+                    value: `${choice1[1][0]["objective_choice"]}\n_${choice1[1][1]["objective_choice"]}_`,
+                    inline: randomQuestion.inline,
+                },
+                {
+                    name: `${choice2[0]}`,
+                    value: `${choice2[1][0]["objective_choice"]}\n_${choice2[1][1]["objective_choice"]}_`,
+                    inline: randomQuestion.inline,
+                },
+                {
+                    name: `${choice3[0]}`,
+                    value: `${choice3[1][0]["objective_choice"]}\n_${choice3[1][1]["objective_choice"]}_`,
+                    inline: randomQuestion.inline,
+                },
+                {
+                    name: `${choice4[0]}`,
+                    value: `${choice4[1][0]["objective_choice"]}\n_${choice4[1][1]["objective_choice"]}_`,
+                    inline: randomQuestion.inline,
+                },
+            ]);
+
+            alphabets_choices.forEach((choice) => {
+                answerRow.addComponents(
                     new ButtonBuilder()
                         .setCustomId(choice.toLowerCase())
                         .setLabel(choice)
-                        .setStyle(ButtonStyle.Secondary)
-                )
-            );
+                        .setStyle(ButtonStyle.Primary)
+                );
+            });
 
-        const hintButtonRow =
-            new ActionRowBuilder<ButtonBuilder>().addComponents(
-                new ButtonBuilder()
-                    .setCustomId("hint")
-                    .setEmoji("💡")
-                    .setLabel("Hint")
-                    .setStyle(ButtonStyle.Danger)
-            );
+            reply.edit({
+                content: "",
+                embeds: [embed],
+                components: [answerRow, hintRow],
+            });
 
-        function formatChoices(): string[] {
-            const combinedChoices: Choice[] = randomQuestion[
-                Language.BM
-            ].choices.map(
-                (
-                    bmChoice: { choice: string; isAnswer: boolean },
-                    index: number
-                ): Choice => {
-                    const biChoice = randomQuestion[Language.BI].choices[index];
-                    return {
-                        label: "",
-                        bmChoice: bmChoice.choice,
-                        biChoice: biChoice.choice,
-                        originalIndex: index,
-                    };
-                }
-            );
+            collector.on("collect", async (i) => {
+                const { customId } = i;
 
-            const shuffledChoices: Choice[] = ShuffleArray(
-                combinedChoices
-            ) as Choice[];
+                if (customId == correctAnswerId) {
+                    i.reply({
+                        embeds: [
+                            new EmbedBuilder()
+                                .setTitle(`Hurray!`)
+                                .setDescription(
+                                    `<@!${i.user.id}> got it correct!`
+                                )
+                                .setColor(Colors.Green),
+                        ],
+                    }).then((r) => {
+                        setTimeout(() => {
+                            r.delete();
+                        }, 8_000);
+                    });
 
-            shuffledChoices.forEach((choice, index) => {
-                choice.label = `${choiceOptions[index]}`;
-
-                if (
-                    randomQuestion[Language.BM].choices[choice.originalIndex]
-                        .isAnswer == true
-                ) {
-                    correctAnswerId = choice.label.toLowerCase();
+                    collector.stop();
+                } else if (customId == "hint") {
+                    i.reply({
+                        embeds: [
+                            randomQuestion.hint
+                                ? new EmbedBuilder()
+                                      .setTitle(":bulb: Hint")
+                                      .setDescription(`${randomQuestion.hint}`)
+                                      .setColor(Colors.Gold)
+                                : new EmbedBuilder()
+                                      .setTitle(":bulb: Hint")
+                                      .setDescription(`No hint available.`)
+                                      .setColor(Colors.Red),
+                        ],
+                        ephemeral: true,
+                    });
+                } else {
+                    i.reply({
+                        embeds: [
+                            new EmbedBuilder()
+                                .setTitle(`Nah.`)
+                                .setDescription(`<@!${i.user.id}>, try again!`)
+                                .setColor(Colors.Red),
+                        ],
+                    }).then((r) => {
+                        setTimeout(() => {
+                            r.delete();
+                        }, 4_000);
+                    });
                 }
             });
 
-            const formattedChoices = shuffledChoices.map(
-                (choice) =>
-                    `:regional_indicator_${choice.label.toLowerCase()}:\n${
-                        choice.bmChoice
-                    }\n_${choice.biChoice}_`
-            );
+            collector.on("end", async () => {
+                answerRow.components.forEach((component) =>
+                    component.setDisabled(true)
+                );
+                hintRow.components.forEach((component) =>
+                    component.setDisabled(true)
+                );
 
-            return formattedChoices;
+                reply.edit({
+                    content: `The answer was **${correctAnswerId.toUpperCase()}**.`,
+                    components: [answerRow, hintRow],
+                });
+            });
         }
-
-        const questionEmbed = new EmbedBuilder()
-            .setTitle(`⁉️ Random Question`)
-            .setDescription(
-                `**${randomQuestion[Language.BM].question}**\n**_${
-                    randomQuestion[Language.BI].question
-                }_**\n\n${formatChoices().join("\n\n")}`
-            )
-            .setThumbnail(randomQuestion.image ? randomQuestion.image : null)
-            .setFooter({
-                text: `Difficulty: ${randomQuestion.difficulty} | Chapter: ${randomQuestion.chapter}`,
+        if (randomQuestion.type == QuestionType.StructuralFillInTheBlanks) {
+            answerRow.addComponents([
+                new ButtonBuilder()
+                    .setCustomId("fitb-slot")
+                    .setLabel("Insert answer here.")
+                    .setStyle(ButtonStyle.Primary),
+            ]);
+            reply.edit({
+                content: "",
+                embeds: [embed],
+                components: [answerRow],
             });
-
-        const reply = await interaction.reply({
-            embeds: [questionEmbed],
-            components: [choicesButtonRow, hintButtonRow],
-        });
-
-        const buttonCollector = reply.createMessageComponentCollector({
-            componentType: ComponentType.Button,
-            filter: (i) =>
-                i.user.id === interaction.user.id ||
-                i.user.id !== interaction.user.id,
-            time: 30_000,
-        });
-
-        buttonCollector.on("collect", async (i) => {
-            if (i.user.id !== interaction.user.id) {
-                await i.reply({
-                    content: `This is <@!${interaction.user.id}>'s button. You wanna try it out too? Run this command (</random:1276458136252842029>).`,
-                    ephemeral: true,
-                });
-                return;
-            }
-
-            const id = i.customId;
-
-            if (id === "hint") {
-                i.reply({
-                    content: randomQuestion.hint
-                        ? `💡 Hint:\n${randomQuestion.hint}`
-                        : "No hint available.",
-                    ephemeral: true,
-                });
-                return;
-            }
-            if (id === correctAnswerId) {
-                await i
-                    .reply({
-                        content: `@everyone The correct answer was **${correctAnswerId.toUpperCase()}**.`,
-                        flags: [4096],
-                    })
-                    .then((i_) => {
-                        setTimeout(() => {
-                            i_.delete();
-                        }, 10_000);
-                    });
-
-                i.followUp({
-                    content:
-                        "🎉 You got it correct! Rerun command? </random:1276458136252842029>",
-                    ephemeral: true,
-                });
-
-                buttonCollector.stop();
-            } else {
-                await reply.edit({
-                    embeds: [questionEmbed.setColor(Colors.Red)],
-                });
-                i.reply({
-                    content: "❌ Incorrect! Try again.",
-                    ephemeral: true,
-                });
-            }
-        });
-
-        buttonCollector.on("end", async () => {
-            const disabledRow =
-                new ActionRowBuilder<ButtonBuilder>().addComponents(
-                    choicesButtonRow.components.map((button) =>
-                        ButtonBuilder.from(button)
-                            .setDisabled(true)
-                            .setStyle(ButtonStyle.Success)
-                    )
-                );
-            const disabledHintRow =
-                new ActionRowBuilder<ButtonBuilder>().addComponents(
-                    hintButtonRow.components.map((button) =>
-                        ButtonBuilder.from(button).setDisabled(true)
-                    )
-                );
-
-            try {
-                await reply.edit({
-                    content: `The correct answer was **${correctAnswerId?.toUpperCase()}**.`,
-                    embeds: [questionEmbed.setColor(Colors.Green)],
-                    components: [disabledRow, disabledHintRow],
-                });
-            } catch (e) {
-                const error = e as Error;
-                const stackedError = error.stack?.replaceAll(
-                    `haydenyong`,
-                    "***"
-                );
-                interaction.channel
-                    ?.send({
-                        content: `An error occurred:\n\`\`\`${stackedError}\`\`\``,
-                    })
-                    .then((r) => {
-                        setTimeout(() => {
-                            return r.delete() as Promise<Message<false>>;
-                        }, 7_000);
-                    });
-            }
-        });
+        } else if (randomQuestion.type == QuestionType.StructuralTick) {
+            answerRow.addComponents([
+                new ButtonBuilder()
+                    .setCustomId("tick-slot")
+                    .setLabel("Insert answer here.")
+                    .setStyle(ButtonStyle.Primary),
+            ]);
+            reply.edit({
+                content: "",
+                embeds: [embed],
+                components: [answerRow],
+            });
+        } else if (randomQuestion.type == QuestionType.StructuralWrite) {
+            answerRow.addComponents([
+                new ButtonBuilder()
+                    .setCustomId("write-slot")
+                    .setLabel("Insert answer here.")
+                    .setStyle(ButtonStyle.Primary),
+            ]);
+            reply.edit({
+                content: "",
+                embeds: [embed],
+                components: [answerRow],
+            });
+        }
     }
+}
+
+/**
+ * Loads the respective folder.
+ */
+async function loadFiles(subject: Subject, level: Level) {
+    const files = (
+        await glob(
+            `${path.join(
+                __dirname,
+                "..",
+                "Questions"
+            )}/${subject}/${level}/*.js`
+        )
+    )
+        .map((filePath) => path.resolve(filePath))
+        .sort((a, b) => {
+            const numA = parseInt(path.basename(a, ".js").match(/\d+/)![0], 10);
+            const numB = parseInt(path.basename(b, ".js").match(/\d+/)![0], 10);
+
+            return numA - numB;
+        });
+
+    const questions = await Promise.all(
+        files.map(async (file: string) => {
+            const module = await import(file);
+            const questionFile = new module.default() as Question;
+
+            return questionFile;
+        })
+    );
+
+    return questions;
 }
