@@ -1,6 +1,6 @@
 # TODO List
 
-## Work In Progress
+## 🛠️ Work In Progress
 
 1. **Random Question Command Rework**
 
@@ -8,7 +8,7 @@
 
     > Objective have just been finished and structural types are still work in progress.
 
-## Todo
+## 🖊️ Todo
 
 1. **Notes**
 
