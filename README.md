@@ -25,7 +25,7 @@ Join [**Hello World** on Discord](https://discord.gg/t7CMXRWs7G) if you want to 
 
 1. `/random <level: required>`
 
-    : Sends out a random question from the [questions list](questions.json) with the level option (Form 1, Form 2, Form 3, Form 4, Form 5).
+    : Sends out a random question from the [questions list](https://github.com/haydenykh/SainsOrScienceBot/blob/main/src/Questions) with the level option (Form 1, Form 2, Form 3, Form 4, Form 5).
 
 ## Contribution
 
