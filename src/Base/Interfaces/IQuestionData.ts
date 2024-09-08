@@ -39,6 +39,7 @@ interface IQuestionData {
     hint?: string;
     credits?: string;
     inline?: boolean;
+    deprecated?: boolean;
 }
 
 export default IQuestionData;

@@ -34,6 +34,7 @@ export default class Question implements IQuestionData {
     readonly hint?: string;
     readonly credits?: string;
     readonly inline?: boolean;
+    readonly deprecated?: boolean;
 
     constructor(data: IQuestionData) {
         this.BI = data.BI;
@@ -45,5 +46,6 @@ export default class Question implements IQuestionData {
         this.hint = data.hint;
         this.credits = data.credits || "No credits mentioned.";
         this.inline = data.inline || false;
+        this.deprecated = data.deprecated || false;
     }
 }
