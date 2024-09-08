@@ -54,7 +54,7 @@ export default class F3_4 extends Question {
             difficulty: QuestionDifficulty.Rendah,
             chapter: "1",
             hint: "Setakat Tingkatan 3, hanya terdapat 2 fotoreseptor yang diajar, iaitu **sel rod** dan **sel kon**. Ini sepatutnya menghapuskan dua pilihan lain.\n_As of Form 3, there are only 2 photoreceptors that was taught and those are the **rod cells** and **cone cells**. This should eliminate two other options._",
-            image: "https://raw.githubusercontent.com/haydenykh/SainsOrScienceBot/main/assets/images/science/f3/photoreceptors_found_in_the_retina.jpg",
+            image: "https://raw.githubusercontent.com/haydenykh/SainsOrScienceBot/main/assets/images/F3/Science/photoreceptors_found_in_the_retina.jpg",
             type: QuestionType.Objective,
             inline: true,
         });

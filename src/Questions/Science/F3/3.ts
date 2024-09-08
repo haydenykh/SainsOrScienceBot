@@ -62,7 +62,7 @@ export default class F3_3 extends Question {
             difficulty: QuestionDifficulty.Rendah,
             chapter: "1",
             hint: "Apakah yang **dibebaskan** oleh lilin?\nWhat do candles **release**?",
-            image: "https://raw.githubusercontent.com/haydenykh/SainsOrScienceBot/main/assets/images/science/f3/involuntary_action_to_avoid_injury.jpg",
+            image: "https://raw.githubusercontent.com/haydenykh/SainsOrScienceBot/main/assets/images/F3/Science/involuntary_action_to_avoid_injury.jpg",
             type: QuestionType.Objective,
         });
     }

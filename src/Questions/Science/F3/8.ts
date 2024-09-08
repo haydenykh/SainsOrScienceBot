@@ -62,7 +62,7 @@ export default class F3_8 extends Question {
             difficulty: QuestionDifficulty.Sederhana,
             chapter: "1",
             hint: "Dalam imej, **akar tumbuhan** menghadap ke **arah tertentu**, yang kebanyakan tumbuhan tidak lakukan kecuali **air** hadir. Bagi **pucuk tumbuhan**, ia tumbuh **ke atas** dan bukannya ke bawah.\n_In the image, the **plant's root** is facing towards a **specific direction**, which most plants do not do unless **water** is present. As for the **plant's shoot**, it's growing **upwards** instead of downwards._",
-            image: "https://raw.githubusercontent.com/haydenykh/SainsOrScienceBot/main/assets/images/science/f3/roots_and_shoots_show_tropism_responses.jpg",
+            image: "https://raw.githubusercontent.com/haydenykh/SainsOrScienceBot/main/assets/images/F3/Science/roots_and_shoots_show_tropism_responses.jpg",
             type: QuestionType.Objective,
         });
     }

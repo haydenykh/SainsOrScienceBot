@@ -54,7 +54,7 @@ export default class F3_5 extends Question {
             difficulty: QuestionDifficulty.Rendah,
             chapter: "1",
             hint: "Lidah terdiri daripada **5** kawasan rasa. Di kawasan _X_, kebanyakannya boleh berasa **pahit**.\n_The tongue consists of **5** taste areas. In area X, it can predominantly taste **bitter**._",
-            image: "https://raw.githubusercontent.com/haydenykh/SainsOrScienceBot/main/assets/images/science/f3/tongue.jpg",
+            image: "https://raw.githubusercontent.com/haydenykh/SainsOrScienceBot/main/assets/images/F3/Science/tongue.jpg",
             type: QuestionType.Objective,
             inline: true,
         });

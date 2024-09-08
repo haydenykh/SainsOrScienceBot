@@ -61,7 +61,7 @@ export default class F3_7 extends Question {
             },
             difficulty: QuestionDifficulty.Tinggi,
             chapter: "1",
-            image: "https://raw.githubusercontent.com/haydenykh/SainsOrScienceBot/main/assets/images/science/f3/people_with_colds_lack_appetite.jpg",
+            image: "https://raw.githubusercontent.com/haydenykh/SainsOrScienceBot/main/assets/images/F3/Science/people_with_colds_lack_appetite.jpg",
             type: QuestionType.Objective,
         });
     }

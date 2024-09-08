@@ -61,7 +61,7 @@ export default class F3_2 extends Question {
             },
             difficulty: QuestionDifficulty.Sederhana,
             chapter: "1",
-            image: "https://raw.githubusercontent.com/haydenykh/SainsOrScienceBot/main/assets/images/science/f3/brain.jpg",
+            image: "https://raw.githubusercontent.com/haydenykh/SainsOrScienceBot/main/assets/images/F3/Science/brain.jpg",
             type: QuestionType.Objective,
         });
     }
