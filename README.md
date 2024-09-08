@@ -23,9 +23,9 @@ Join [**Hello World** on Discord](https://discord.gg/t7CMXRWs7G) if you want to 
 
 ## Features
 
-1. `/random <level: required>`
+1. `/random <level: required> <subject: required>`
 
-    : Sends out a random question from the [questions list](https://github.com/haydenykh/SainsOrScienceBot/blob/main/src/Questions) with the level option (Form 1, Form 2, Form 3, Form 4, Form 5).
+    : Sends out a random question of the subject `("Science" | "Biology" | "Physics" | "Geography" | "Chemistry")` from the [questions list](https://github.com/haydenykh/SainsOrScienceBot/blob/main/src/Questions) with the level option `("Form 1" | "Form 2" | "Form 3" | "Form 4" | "Form 5")`. It will send a error stating that if you're below Form 4 & 5, you couldn't use Biology, Physics and Chemistry subjects.
 
 ## Contribution
 
