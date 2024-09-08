@@ -39,7 +39,10 @@ interface IQuestionData {
     hint?: string;
     credits?: string;
     inline?: boolean;
-    deprecated?: boolean;
+    deprecated?: {
+        bool: boolean;
+        yearEnd: number;
+    };
 }
 
 export default IQuestionData;
