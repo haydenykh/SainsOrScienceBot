@@ -2,6 +2,41 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.9.0](https://github.com/haydenykh/SainsOrScienceBot/compare/v0.8.1...v0.9.0) (2024-09-08)
+
+
+### ⚠ BREAKING CHANGES
+
+* Random Question Command rework (`structural_fitb`, `structural_tick` and `structural_write` are still work in progress)
+* now features pino to log outputs
+
+### 🔧 Bug Fixes
+
+* directs to CONTRIBUTE.md instead of issues page ([48fcb70](https://github.com/haydenykh/SainsOrScienceBot/commit/48fcb703c88c19cfeb72c40c5540622f98ea307c))
+* spelling error of `n[x` to `npx` ([ce437ed](https://github.com/haydenykh/SainsOrScienceBot/commit/ce437ed88dc2dfe423d6bb135be174ac1e9c90e2))
+
+
+### 🚀 Features
+
+* now features pino to log outputs ([90172bc](https://github.com/haydenykh/SainsOrScienceBot/commit/90172bc6da8180ee131fbe751b201eca14e83b4e))
+* Random Question Command rework (`structural_fitb`, `structural_tick` and `structural_write` are still work in progress) ([5fd8c74](https://github.com/haydenykh/SainsOrScienceBot/commit/5fd8c7417e976af27c9cc6145aa793f5008f5c41))
+
+
+### 🖇️ Others
+
+* added `using discord.js module` in info command ([555f41a](https://github.com/haydenykh/SainsOrScienceBot/commit/555f41ab5349fae4c9a973d03efda4f496546a6e))
+* added subject parameter to `/random` command ([768822b](https://github.com/haydenykh/SainsOrScienceBot/commit/768822b4de0b0d9611286e80b5b1889ef7356fb2))
+* grammar fix ([c897fc9](https://github.com/haydenykh/SainsOrScienceBot/commit/c897fc942c327c4e9ce3b5efea748b3a3778a3bf))
+* grammar issues, added `been` ([42af61a](https://github.com/haydenykh/SainsOrScienceBot/commit/42af61a5b5e17dee70878afa0064e28a64b59569))
+* updated direct link of `questions file` ([b315cd8](https://github.com/haydenykh/SainsOrScienceBot/commit/b315cd81649f20d79c8e83b57cf90bd8628752eb))
+
+
+### 🔮 Style
+
+* added emojis for aesthetic purposes ([38faa73](https://github.com/haydenykh/SainsOrScienceBot/commit/38faa736151c82e69de1864e466b984009f20bae))
+* bold text ([6f16b20](https://github.com/haydenykh/SainsOrScienceBot/commit/6f16b2091336fc94ccab11a59aec8c8223934bb5))
+* remove `code` text ([14f063e](https://github.com/haydenykh/SainsOrScienceBot/commit/14f063eba8b37a70532099009d972b579b4af686))
+
 ### [0.8.1](https://github.com/haydenykh/SainsOrScienceBot/compare/v0.8.0...v0.8.1) (2024-09-03)
 
 
