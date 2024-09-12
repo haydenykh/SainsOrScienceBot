@@ -9,7 +9,8 @@
     > Objective have just been finished and structural types are still work in progress.
 
 2. **More Questions**
-   : Creating this project is very fun and the downside is that it lacks questions. Questions are the main factors on how this bot works. Questions can be received from you guys (read the [CONTRIBUTING.md file](CONTRIBUTING.md) for more). If you already had a(n) exercise/note book about that subject, you can always write a question to the bot. It would be highly appreciated to help me fulfil the questions list.
+
+    : Creating this project is very fun and the downside is that it lacks questions. Questions are the main factors on how this bot works. Questions can be received from you guys (read the [CONTRIBUTING.md file](CONTRIBUTING.md) for more). If you already had a(n) exercise/note book about that subject, you can always write a question to the bot. It would be highly appreciated to help me fulfil the questions list.
 
 ## 🖊️ Todo
 
