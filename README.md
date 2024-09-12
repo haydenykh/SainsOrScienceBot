@@ -35,4 +35,4 @@ There's also a [TODO list](TODO.md) where you can see future updates to the bot.
 
 ## License
 
-Uses the [ISC License](LICENSE).
+Under the [ISC License](LICENSE).
