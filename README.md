@@ -15,6 +15,8 @@
 
 quizzes from Malaysia's governmental secondary schools with both 🇲🇾 **Malay (Bahasa Melayu)** and 🇬🇧 **English** language support.
 
+> **NOTE: THIS PROJECT IS NOT AFFILIATED WITH THE GOVERNMENT.**
+
 > Credits to [@SpikeThatMike](https://www.youtube.com/@spikethatmike)'s **TypeScript Discord.JS Series** on YouTube for helping out with this project.
 
 ## Usage
