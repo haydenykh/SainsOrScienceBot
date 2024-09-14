@@ -2,6 +2,52 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.10.0](https://github.com/haydenykh/SainsOrScienceBot/compare/v0.9.0...v0.10.0) (2024-09-14)
+
+
+### 🔧 Build System
+
+* updated dependencies ([420ce0c](https://github.com/haydenykh/SainsOrScienceBot/commit/420ce0c37627ae5c87722418f7292c6f7d0c62d9))
+
+
+### 🔮 Style
+
+* added italics ([d029507](https://github.com/haydenykh/SainsOrScienceBot/commit/d0295075ce5f9b9ffdc33ee3e55115fca670c106))
+* formatting on todo file ([29f18f6](https://github.com/haydenykh/SainsOrScienceBot/commit/29f18f6c3805cd4c3179569b88261345ca5f6f48))
+
+
+### 🖇️ Others
+
+* added note where to use an image enhancer ([7f1db96](https://github.com/haydenykh/SainsOrScienceBot/commit/7f1db963d99eec1bebdd718ccb34df00945d27b6))
+* added text `Project is not affiliated with the government` ([6f67a52](https://github.com/haydenykh/SainsOrScienceBot/commit/6f67a52eb6a3d9d9dc237b0c28ed4450f43a923b))
+* another grammar mistake (countable prefix `an`) ([4555f4c](https://github.com/haydenykh/SainsOrScienceBot/commit/4555f4cd3c94f5180b7dfed01c8338a892dfd143))
+* changed `no-unused-vars` to `warn` value ([f6f7be8](https://github.com/haydenykh/SainsOrScienceBot/commit/f6f7be8c7cecf5d0198152cc6bff4845e1ec00c6))
+* changed emoji on hint button & temporarily remove sort system ([15cd8d9](https://github.com/haydenykh/SainsOrScienceBot/commit/15cd8d91612d49b26464d0afd5d11b97abe626ef))
+* grammar issue from `images` to `image` as you can only upload one per question ([108e844](https://github.com/haydenykh/SainsOrScienceBot/commit/108e844641a6fda72131e28dba74580d6e766314))
+* grammar issue of `Uses` to `Under` ([8b65c1f](https://github.com/haydenykh/SainsOrScienceBot/commit/8b65c1fd337625c9f495807fa94e3402ffef5d82))
+* stated that your name will be added to credits section in embed if said issue were accepted ([324958e](https://github.com/haydenykh/SainsOrScienceBot/commit/324958e3da61b1e8acb63714d239b24637b25ef6))
+
+
+### 🚀 Features
+
+* added `bool` and `yearEnd` properties in `deprecated` property ([c4811ca](https://github.com/haydenykh/SainsOrScienceBot/commit/c4811ca31aa4937737b714115d4e53c3d171bf63))
+* added `deprecated` option to check if its updated to the latest version ([dd0eb60](https://github.com/haydenykh/SainsOrScienceBot/commit/dd0eb60a919c8e134b1555120666b99e97b32971))
+* added 10 new questions ([b817618](https://github.com/haydenykh/SainsOrScienceBot/commit/b81761888c13de69ab39a481f75b2821ee6b7f1a))
+* added commit notes ([f99cd23](https://github.com/haydenykh/SainsOrScienceBot/commit/f99cd2335c398b21a6f19cd65ac86285e28248b9))
+* new todo in wip ([3a44147](https://github.com/haydenykh/SainsOrScienceBot/commit/3a441479c446549f750453ab47f171d35c398374))
+* now checks if the user already ran a command & added back message deletion after getting an answer correct/incorrect & added deprecation check ([449adf9](https://github.com/haydenykh/SainsOrScienceBot/commit/449adf98156c03fdeb7d483aa2a0cdc9cbe95ca1))
+
+
+### 🔧 Bug Fixes
+
+* changed `lungs.jpeg` to `lungs.jpg` ([e99290a](https://github.com/haydenykh/SainsOrScienceBot/commit/e99290a56b090466ec220462d0aaedb3d6386bc1))
+* changed image format from `jpeg` to jpg` ([9e1ea01](https://github.com/haydenykh/SainsOrScienceBot/commit/9e1ea011d8f9e905dcac171b49c80e0f5585a80e))
+* changed name from `CONTRIBUTE` to `CONTRIBUTION` ([dd645c9](https://github.com/haydenykh/SainsOrScienceBot/commit/dd645c9e6b76be7f240075c2bb6c29e28aebe635))
+* fix previous commit of `CONTRIBUTION` to `CONTRIBUTING` ([816a5e7](https://github.com/haydenykh/SainsOrScienceBot/commit/816a5e715dc0ede5061deac1b45e30a3c9e8c2c5))
+* migrated `ObjectiveQuestionChoices`, `TickQuestionChoices`, `WriteQuestionChoices` and `FITBQuestionChoices` to its own types file & added comment `not used` to unused choices types ([a6f16bf](https://github.com/haydenykh/SainsOrScienceBot/commit/a6f16bf9b0f42179a754dd1f05fe264a6b6af23b))
+* updated directory ordering ([3f36d5b](https://github.com/haydenykh/SainsOrScienceBot/commit/3f36d5b77dedf82717f26c71fbfc3e05de0d74bd))
+* use `trycatch` method instead of instant reply ([38cdc01](https://github.com/haydenykh/SainsOrScienceBot/commit/38cdc0195a84dacecf266faf02bc28f35788ef84))
+
 ## [0.9.0](https://github.com/haydenykh/SainsOrScienceBot/compare/v0.8.1...v0.9.0) (2024-09-08)
 
 
