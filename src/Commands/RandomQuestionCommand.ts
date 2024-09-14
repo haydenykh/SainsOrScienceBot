@@ -289,49 +289,71 @@ export default class RandomQuestionCommand extends Command {
                 const { customId } = i;
 
                 if (customId == correctAnswerId) {
-                    i.reply({
-                        embeds: [
-                            new EmbedBuilder()
-                                .setTitle(`Hurray!`)
-                                .setDescription(
-                                    `<@!${i.user.id}> got it correct!`
-                                )
-                                .setColor(Colors.Green),
-                        ],
-                    }).then((r) => {
-                        setTimeout(() => {
-                            r.delete();
-                        }, 5_000);
-                    });
+                    try {
+                        i.reply({
+                            embeds: [
+                                new EmbedBuilder()
+                                    .setTitle(`Hurray!`)
+                                    .setDescription(
+                                        `<@!${i.user.id}> got it correct!`
+                                    )
+                                    .setColor(Colors.Green),
+                            ],
+                        }).then((r) => {
+                            setTimeout(() => {
+                                r.delete();
+                            }, 5_000);
+                        });
+                    } catch (e) {
+                        interaction.followUp({
+                            content: `An error occurred.\n\`\`\`${e}\`\`\``,
+                        });
+                    }
                     collector.stop();
                 } else if (customId == "hint") {
-                    i.reply({
-                        embeds: [
-                            randomQuestion.hint
-                                ? new EmbedBuilder()
-                                      .setTitle(":bulb: Hint")
-                                      .setDescription(`${randomQuestion.hint}`)
-                                      .setColor(Colors.Gold)
-                                : new EmbedBuilder()
-                                      .setTitle(":bulb: Hint")
-                                      .setDescription(`No hint available.`)
-                                      .setColor(Colors.Red),
-                        ],
-                        ephemeral: true,
-                    });
+                    try {
+                        i.reply({
+                            embeds: [
+                                randomQuestion.hint
+                                    ? new EmbedBuilder()
+                                          .setTitle(":bulb: Hint")
+                                          .setDescription(
+                                              `${randomQuestion.hint}`
+                                          )
+                                          .setColor(Colors.Gold)
+                                    : new EmbedBuilder()
+                                          .setTitle(":bulb: Hint")
+                                          .setDescription(`No hint available.`)
+                                          .setColor(Colors.Red),
+                            ],
+                            ephemeral: true,
+                        });
+                    } catch (e) {
+                        interaction.followUp({
+                            content: `An error occurred.\n\`\`\`${e}\`\`\``,
+                        });
+                    }
                 } else {
-                    i.reply({
-                        embeds: [
-                            new EmbedBuilder()
-                                .setTitle(`Not quite.`)
-                                .setDescription(`<@!${i.user.id}>, try again!`)
-                                .setColor(Colors.Red),
-                        ],
-                    }).then((r) => {
-                        setTimeout(() => {
-                            r.delete();
-                        }, 5_000);
-                    });
+                    try {
+                        i.reply({
+                            embeds: [
+                                new EmbedBuilder()
+                                    .setTitle(`Not quite.`)
+                                    .setDescription(
+                                        `<@!${i.user.id}>, try again!`
+                                    )
+                                    .setColor(Colors.Red),
+                            ],
+                        }).then((r) => {
+                            setTimeout(() => {
+                                r.delete();
+                            }, 5_000);
+                        });
+                    } catch (e) {
+                        interaction.followUp({
+                            content: `An error occurred.\n\`\`\`${e}\`\`\``,
+                        });
+                    }
                 }
             });
 
