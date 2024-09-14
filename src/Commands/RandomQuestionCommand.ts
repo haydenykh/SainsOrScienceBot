@@ -8,8 +8,8 @@ import {
     Colors,
     ComponentType,
     EmbedBuilder,
-    ModalActionRowComponentBuilder,
-    ModalBuilder,
+    GuildTextBasedChannel,
+    InteractionCollector,
     SlashCommandBuilder,
 } from "discord.js";
 import Command from "../Base/Classes/Command.js";
@@ -20,14 +20,9 @@ import path from "node:path";
 import { fileURLToPath } from "url";
 import Question from "../Base/Classes/Question.js";
 import { QuestionLanguage, QuestionType } from "../Base/Enums/QuestionEnums.js";
-import {
-    ObjectiveQuestionChoices,
-    TickQuestionChoices,
-    WriteQuestionChoices,
-    FITBQuestionChoices,
-} from "../Base/Interfaces/IQuestionData.js";
 import ShuffleArray from "../Functions/ShuffleArray.js";
 import ShuffleMap from "../Functions/ShuffleMap.js";
+import { ObjectiveQuestionChoices } from "../Base/Types/QuestionTypes.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -49,6 +44,10 @@ enum Subject {
 }
 
 export default class RandomQuestionCommand extends Command {
+    private activeCollectors: Map<
+        string,
+        InteractionCollector<ButtonInteraction>
+    > = new Map();
     constructor(client: ExtendedClient) {
         super(client, {
             data: new SlashCommandBuilder()
@@ -81,11 +80,11 @@ export default class RandomQuestionCommand extends Command {
                         .setRequired(true)
                 ),
             category: Categories.Utilities,
-            cooldown: 2,
+            cooldown: 3,
         });
     }
     async Execute(interaction: ChatInputCommandInteraction) {
-        const { options } = interaction;
+        const { options, user } = interaction;
         const level = options.getString("level", true) as Level;
         const subject = options.getString("subject", true) as Subject;
 
@@ -98,6 +97,19 @@ export default class RandomQuestionCommand extends Command {
                 .setLabel("Hint")
                 .setStyle(ButtonStyle.Secondary)
         );
+
+        const userId = user.id;
+        if (this.activeCollectors.has(userId)) {
+            await interaction.reply({
+                content: `I am trying to process the interaction. Please rerun the command.`,
+                ephemeral: true,
+            });
+
+            const previousCollector = this.activeCollectors.get(userId);
+            previousCollector?.stop();
+
+            return;
+        }
 
         let reply;
 
@@ -116,13 +128,15 @@ export default class RandomQuestionCommand extends Command {
         });
 
         const questions = await loadFiles(subject, level);
-        const filteredQuestions: Question[] = questions.map((q: Question) => q);
+        const filteredQuestions: Question[] = questions.filter(
+            Boolean
+        ) as Question[];
         const randomQuestion =
             filteredQuestions[Math.floor(Math.random() * questions.length)];
 
         if (!randomQuestion) {
             return reply.edit({
-                content: `No questions has been added to this subject and/or level.\n\n> If you would like to add one, head over to [the GitHub page](https://github.com/haydenykh/SainsOrScienceBot)'s [CONTRIBUTE.md file](https://github.com/haydenykh/SainsOrScienceBot/blob/main/CONTRIBUTE.md). You'll find mostly everything you need in there.`,
+                content: `No questions has been added to this subject and/or level.\n\n> If you would like to add one, head over to [the GitHub page](https://github.com/haydenykh/SainsOrScienceBot)'s [CONTRIBUTING.md file](https://github.com/haydenykh/SainsOrScienceBot/blob/main/CONTRIBUTING.md). You'll find mostly everything you need in there.`,
             });
         }
 
@@ -154,11 +168,16 @@ export default class RandomQuestionCommand extends Command {
         const filter = (i: ButtonInteraction) =>
             i.user.id == interaction.user.id;
 
-        const collector = interaction.channel!.createMessageComponentCollector({
-            componentType: ComponentType.Button,
-            filter,
-            time: 25_000,
-        });
+        const collector =
+            (interaction.channel as GuildTextBasedChannel)!.createMessageComponentCollector(
+                {
+                    componentType: ComponentType.Button,
+                    filter,
+                    time: 25_000,
+                }
+            );
+
+        this.activeCollectors.set(userId, collector);
 
         if (randomQuestion.type == QuestionType.Objective) {
             const alphabets_choices = ["A", "B", "C", "D"];
@@ -279,6 +298,10 @@ export default class RandomQuestionCommand extends Command {
                                 )
                                 .setColor(Colors.Green),
                         ],
+                    }).then((r) => {
+                        setTimeout(() => {
+                            r.delete();
+                        }, 5_000);
                     });
                     collector.stop();
                 } else if (customId == "hint") {
@@ -300,15 +323,21 @@ export default class RandomQuestionCommand extends Command {
                     i.reply({
                         embeds: [
                             new EmbedBuilder()
-                                .setTitle(`Nah.`)
+                                .setTitle(`Not quite.`)
                                 .setDescription(`<@!${i.user.id}>, try again!`)
                                 .setColor(Colors.Red),
                         ],
+                    }).then((r) => {
+                        setTimeout(() => {
+                            r.delete();
+                        }, 5_000);
                     });
                 }
             });
 
             collector.on("end", async () => {
+                this.activeCollectors.delete(userId);
+
                 answerRow.components.forEach((component) =>
                     component.setDisabled(true)
                 );
@@ -386,6 +415,10 @@ async function loadFiles(subject: Subject, level: Level) {
         files.map(async (file: string) => {
             const module = await import(file);
             const questionFile = new module.default() as Question;
+
+            if (questionFile.deprecated?.bool == true) {
+                return;
+            }
 
             return questionFile;
         })
