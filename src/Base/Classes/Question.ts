@@ -3,29 +3,30 @@ import {
     QuestionLanguage,
     QuestionDifficulty,
 } from "../Enums/QuestionEnums.js";
-import IQuestionData, {
+import IQuestionData from "../Interfaces/IQuestionData.js";
+import {
+    FITBQuestionChoices,
     ObjectiveQuestionChoices,
     TickQuestionChoices,
     WriteQuestionChoices,
-    FITBQuestionChoices,
-} from "../Interfaces/IQuestionData.js";
+} from "../Types/QuestionTypes.js";
 
 export default class Question implements IQuestionData {
     readonly BI: {
         question: string;
         choices:
             | ObjectiveQuestionChoices
-            | TickQuestionChoices
-            | WriteQuestionChoices
-            | FITBQuestionChoices;
+            | TickQuestionChoices /* not used */
+            | WriteQuestionChoices /* not used */
+            | FITBQuestionChoices /* not used */;
     };
     readonly BM: {
         question: string;
         choices:
             | ObjectiveQuestionChoices
-            | TickQuestionChoices
-            | WriteQuestionChoices
-            | FITBQuestionChoices;
+            | TickQuestionChoices /* not used */
+            | WriteQuestionChoices /* not used */
+            | FITBQuestionChoices /* not used */;
     };
     readonly difficulty: QuestionDifficulty;
     readonly chapter: string | number;

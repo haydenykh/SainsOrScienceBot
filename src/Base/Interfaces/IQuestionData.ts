@@ -1,19 +1,10 @@
 import { QuestionType, QuestionDifficulty } from "../Enums/QuestionEnums.js";
-
-export type ObjectiveQuestionChoices = {
-    objective_choice: string;
-    is_objective_answer: boolean;
-}[];
-export type TickQuestionChoices = {
-    tick_choice: string;
-    is_tick_answer: boolean;
-}[];
-export type WriteQuestionChoices = {
-    write_answer: string;
-}[];
-export type FITBQuestionChoices = {
-    fitb_answer: string;
-}[];
+import {
+    FITBQuestionChoices,
+    ObjectiveQuestionChoices,
+    TickQuestionChoices,
+    WriteQuestionChoices,
+} from "../Types/QuestionTypes.js";
 
 interface IQuestionData {
     BI: {
