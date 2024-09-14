@@ -16,6 +16,8 @@ You can also assign labels such as `feature`, `bug`, etc. You can leave it blank
 
 Then you can submit it!
 
+If your issue was accepted, your name will be added to the credits section of the question embed.
+
 ---
 
 ### Objective type
