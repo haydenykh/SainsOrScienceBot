@@ -21,7 +21,7 @@ quizzes from Malaysia's governmental secondary schools with both 🇲🇾 **Mala
 
 ## Usage
 
-Join [**Hello World** on Discord](https://discord.gg/t7CMXRWs7G) if you want to use it.
+Join [**Hello World** on Discord](https://discord.gg/t7CMXRWs7G) if you want to try it.
 
 ## Features
 
