@@ -33,9 +33,9 @@ export default class InformationCommand extends Command {
         const infoEmbed = new EmbedBuilder()
             .setTitle(`👋 Hi,`)
             .setDescription(
-                `- I am a bot whom provides predominantly **science quizzes** from Malaysia's governmental secondary schools with both **:flag_my: Malay (Bahasa Melayu)** and **:flag_gb: English support**.\n- I'm not affiliated with the government.\n- I was created by [@haydenykh](https://discord.com/users/900561055472840724) using the **discord.js module** and **TypeScript**.\n- If you want to **add new questions** or **fix my errors**, head to the **[CONTRIBUTING.md file](https://github.com/haydenykh/SainsOrScienceBot/blob/main/CONTRIBUTING.md)** on my **[GitHub repository](https://github.com/haydenykh/SainsOrScienceBot)**.\n- I was also created on **${clientCreatedAt.toLocaleDateString(
+                `- I am a bot whom provides predominantly **science quizzes** from Malaysia's governmental secondary schools with both **:flag_my: Malay (Bahasa Melayu)** and **:flag_gb: English support**.\n- I'm not affiliated with the government.\n- I was created by [@haydenykh](https://discord.com/users/900561055472840724) using the **[discord.js module](https://discord.js.org)** and **[TypeScript](https://typescriptlang.org)**.\n- If you want to **add new questions** or **fix my errors**, head to the **[CONTRIBUTING.md file](https://github.com/haydenykh/SainsOrScienceBot/blob/main/CONTRIBUTING.md)** on my **[GitHub repository](https://github.com/haydenykh/SainsOrScienceBot)**.\n- I was also created on **${clientCreatedAt.toLocaleDateString(
                     "en-GB"
-                )}**, that was approximately **${differenceInDays} days ago**.`
+                )}**, that was approximately **${differenceInDays} days ago**.\n-# > Read more about me in the GitHub repository.`
             )
             .setColor("Random")
             .setThumbnail(
