@@ -22,7 +22,7 @@ If your issue was accepted, your name will be added to the credits section of th
 
 ### Objective type
 
-The objective type is a type with multiple choices with its respective answer in alphabetical order (A, B, C, D, …). It's less likely to have an E option or more.
+The objective type is a type with multiple choices with its respective answer in alphabetical order (A, B, C & D).
 
 Example:
 
@@ -35,8 +35,6 @@ _B. Has more than one nucleus._
 **C. Has a fixed shape.**
 
 _D. Doesn't have a chloroplast._
-
-_E. …_
 
 ### Structural Write type
 
