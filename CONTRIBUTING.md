@@ -47,6 +47,7 @@ Example:
 -   **Size starts from 1 m to 1000 km**
 -   **Made up of stones and metals**
 -   **Has a cold surface temperature, approximately -73°C**
+-   **Travel around the Sun at an average speed of $\textbf{25 km s}^{-1}$**
 -   _Travels at varying speed_
 
 ### Structural FITB type
@@ -58,6 +59,8 @@ Example:
 1. Exothermic reactions \_<ins>**releases heat**</ins>\_ to the environment.
 2. \_<ins>**Granules**</ins>\_ is a phenomenon that occurs on the surface of the Sun due to the plasma convective current in the convection zone.
 3. Henri Becquerel discovered \_<ins>**radioactivity**</ins>\_ when he discovered \_<ins>**uranium salts**</ins>\_ could darken \_<ins>**photo plates**</ins>\_ in 1896.
+4. The pulmonary vein carries \_<ins>**deoxygenated**</ins>\_ blood from the \_<ins>**right ventricle**</ins>\_ to the lungs.
+5. The corona layer is the Sun's \_<ins>**outermost**</ins>\_ layer and extends millions of kilometres into outer space.
 
 ### Structural Tick type
 
@@ -65,7 +68,24 @@ The structural tick type gives a statement and you have to tell whether it's tru
 
 Example:
 
-1. Down syndrome has an extra chromosome in chromosome number 21. ( ✓ )
-2. A healthy manoeuvre is caused by drowning, lightning strikes and electric shocks. ( ✗ )
-3. The general formula for alkane hydrocarbon is $\text{C}\_{n}\text{H}\_{2n+2}$. ( True )
-4. The size of a fungi microorganism is $0.2 \mu \text{m}$ to $10 \mu \text{m}$. ( False )
+|   n | Statement                                                                                                                                         | ✓/✗ |
+| --: | ------------------------------------------------------------------------------------------------------------------------------------------------- | :-: |
+|  1. | Down syndrome has an extra chromosome in chromosome number 21.                                                                                    |  ✓  |
+|  2. | A healthy manoeuvre is caused by drowning, lightning strikes and electric shocks.                                                                 |  ✗  |
+|  3. | The solution of sodium reacting with water to produce hydrogen gas and alkaline solution is $\ce{2Na(s) + 2H\_{2}O(l) -> 2NaOH(aq) + H\_{2}(g)}$. |  ✓  |
+|  4. | Aqueous ammonium, $\ce{Ca(OH)_2}$ is one of the example of strong alkali.                                                                         |  ✗  |
+|  5. | RNA structure is a single polynucleotide chain which is shorter compared to DNA.                                                                  |  ✓  |
+|  6. | Siamese twins are 2 ovum fertilised by 2 sperm.                                                                                                   |  ✗  |
+|  7. | The formula of force is the product of mass and acceleration, $F=ma$.                                                                             |  ✓  |
+|  8. | Longitudinal wave are medium particles vibrate in a direction perpendicular to the direction of wave propagation.                                 |  ✗  |
+
+|   n | Statement                                                                                                                                                                      | True/False |
+| --: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | :--------: |
+|  9. | The general formula for alkane hydrocarbon is $\ce{C\_{n}H\_{2n+2}}$.                                                                                                          |    True    |
+| 10. | The size of a fungi microorganism is $0.2 \mu \text{m}$ to $10 \mu \text{m}$.                                                                                                  |   False    |
+| 11. | Thermosetting polymers cannot be remoulded after heating.                                                                                                                      |    True    |
+| 12. | The chemical equation for impurities in the iron ore react with calcium oxide to form slag or calcium silicate, $\ce{CaSiO\_3}$ is $\ce{CaCO\_{3}(s) -> CaO(s) + CO\_{2}(g)}$. |   False    |
+| 13. | Eubacteria is a prokaryote organism and has a cell wall.                                                                                                                       |    True    |
+| 14. | A single ovary may contain only one ovule.                                                                                                                                     |   False    |
+| 15. | The formula for Pascal's Principle is $P=\frac{F\_{1}}{A\_{1}}=\frac{F\_{2}}{A\_{2}}$ where $F$ is the force exerted on the piston and $A$ is the area of the piston.          |    True    |
+| 16. | The formula for Einstein's Photoelectric Equation is $W=hf\_{0}=\frac{hc}{\lambda}$                                                                                            |   False    |
