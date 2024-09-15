@@ -79,13 +79,13 @@ Example:
 |  7. | The formula of force is the product of mass and acceleration, $F=ma$.                                                                             |  ✓  |
 |  8. | Longitudinal wave are medium particles vibrate in a direction perpendicular to the direction of wave propagation.                                 |  ✗  |
 
-|   n | Statement                                                                                                                                                                      | True/False |
-| --: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | :--------: |
-|  9. | The general formula for alkane hydrocarbon is $\ce{C\_{n}H\_{2n+2}}$.                                                                                                          |    True    |
-| 10. | The size of a fungi microorganism is $0.2 \mu \text{m}$ to $10 \mu \text{m}$.                                                                                                  |   False    |
-| 11. | Thermosetting polymers cannot be remoulded after heating.                                                                                                                      |    True    |
-| 12. | The chemical equation for impurities in the iron ore react with calcium oxide to form slag or calcium silicate, $\ce{CaSiO\_3}$ is $\ce{CaCO\_{3}(s) -> CaO(s) + CO\_{2}(g)}$. |   False    |
-| 13. | Eubacteria is a prokaryote organism and has a cell wall.                                                                                                                       |    True    |
-| 14. | A single ovary may contain only one ovule.                                                                                                                                     |   False    |
-| 15. | The formula for Pascal's Principle is $P=\frac{F\_{1}}{A\_{1}}=\frac{F\_{2}}{A\_{2}}$ where $F$ is the force exerted on the piston and $A$ is the area of the piston.          |    True    |
-| 16. | The formula for Einstein's Photoelectric Equation is $W=hf\_{0}=\frac{hc}{\lambda}$                                                                                            |   False    |
+|   n | Statement                                                                                                                                                                        | True/False |
+| --: | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :--------: |
+|  9. | The general formula for alkane hydrocarbon is $\ce{C\_{n}H\_{2n+2}}$.                                                                                                            |    True    |
+| 10. | The size of a fungi microorganism is $0.2 \mu \text{m}$ to $10 \mu \text{m}$.                                                                                                    |   False    |
+| 11. | Thermosetting polymers cannot be remoulded after heating.                                                                                                                        |    True    |
+| 12. | The chemical equation for impurities in the iron ore react with calcium oxide to form slag or calcium silicate, $\ce{CaSiO\_{3}}$ is $\ce{CaCO\_{3}(s) -> CaO(s) + CO\_{2}(g)}$. |   False    |
+| 13. | Eubacteria is a prokaryote organism and has a cell wall.                                                                                                                         |    True    |
+| 14. | A single ovary may contain only one ovule.                                                                                                                                       |   False    |
+| 15. | The formula for Pascal's Principle is $P=\frac{F\_{1}}{A\_{1}}=\frac{F\_{2}}{A\_{2}}$ where $F$ is the force exerted on the piston and $A$ is the area of the piston.            |    True    |
+| 16. | The formula for Einstein's Photoelectric Equation is $W=hf\_{0}=\frac{hc}{\lambda}$                                                                                              |   False    |
