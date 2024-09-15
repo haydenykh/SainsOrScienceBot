@@ -125,6 +125,7 @@ export default class RandomQuestionCommand extends Command {
 
         reply = await interaction.reply({
             content: "Generating random question…",
+            fetchReply: true,
         });
 
         const questions = await loadFiles(subject, level);
@@ -165,8 +166,16 @@ export default class RandomQuestionCommand extends Command {
                 `${randomQuestion.BM.question}\n_${randomQuestion.BI.question}_`
             );
 
-        const filter = (i: ButtonInteraction) =>
-            i.user.id == interaction.user.id;
+        const filter = (i: ButtonInteraction) => {
+            if (i.user.id !== interaction.user.id) {
+                i.reply({
+                    content:
+                        "You can't click on this command. Try running the command yourself.",
+                    ephemeral: true,
+                });
+            }
+            return i.user.id === interaction.user.id;
+        };
 
         const collector =
             (interaction.channel as GuildTextBasedChannel)!.createMessageComponentCollector(
