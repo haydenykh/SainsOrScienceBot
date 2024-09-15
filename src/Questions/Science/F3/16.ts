@@ -53,7 +53,7 @@ export default class F3_16 extends Question {
             },
             difficulty: QuestionDifficulty.Tinggi,
             chapter: "2",
-            hint: "Perokok pasif bermakna mereka terhidu asap yang dihisap oleh orang lain.\n_A passive smoker meaning they inhaled smoke smoked by someone else._",
+            hint: "Perokok pasif bermakna mereka **terhidu asap yang dihisap oleh orang lain**.\n_A passive smoker meaning they **inhaled smoke smoked by someone else**._",
             image: "https://raw.githubusercontent.com/haydenykh/SainsOrScienceBot/main/assets/images/F3/Science/passive_smoker.jpg",
             type: QuestionType.Objective,
             inline: true,
