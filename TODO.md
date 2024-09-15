@@ -2,7 +2,7 @@
 
 ## 🛠️ Work In Progress
 
-    **Random Question Command Rework**
+1. **Random Question Command Rework**
 
     : The random question command now uses a `json` file full of everything which is a big mess. Therefore, a rework is necessary. It will separate the questions into multiple different files with each question being its file. New classes, enums and interfaces will also be added to ease out the process of creating new questions.
 
