@@ -2,6 +2,43 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.10.1](https://github.com/haydenykh/SainsOrScienceBot/compare/v0.10.0...v0.10.1) (2024-09-17)
+
+
+### 🚀 Features
+
+* added more example questions ([a411869](https://github.com/haydenykh/SainsOrScienceBot/commit/a4118699f681401483b6b4d71c2a84a0034223d3))
+* added point reward system to todo list ([1cd936e](https://github.com/haydenykh/SainsOrScienceBot/commit/1cd936ef72e4bb6e58981a60cf876db4a5c3fc76))
+* checks if the command executor is the same as the button clicker ([55d1e0c](https://github.com/haydenykh/SainsOrScienceBot/commit/55d1e0c816ee65bab5d1785637a5c6d1073afc8a))
+
+
+### 🔧 Build System
+
+* updated dependencies ([5399d33](https://github.com/haydenykh/SainsOrScienceBot/commit/5399d333e0c44349ba926f8ce6e66d0dc68005ef))
+
+
+### 🖇️ Others
+
+* accidentally removed `1.` numbering ([7b9cfe7](https://github.com/haydenykh/SainsOrScienceBot/commit/7b9cfe711b0794208756957b386c33cf63c12a49))
+* added `Leaderboard` text & removed `just` text ([b0e4be6](https://github.com/haydenykh/SainsOrScienceBot/commit/b0e4be6cf927bb4a5f1443a86b6eb9ca4e5fff5e))
+* grammar changed from `use` to `try` ([17df5cf](https://github.com/haydenykh/SainsOrScienceBot/commit/17df5cf428ad785e6ea546a81107ef0341c36b0c))
+* removed `E or more` option as it will never have an `E` option ([a5a12d7](https://github.com/haydenykh/SainsOrScienceBot/commit/a5a12d738d1cb8448d0f24a50d934abc0c2b780b))
+* removed text `first`, `second` ([5389f40](https://github.com/haydenykh/SainsOrScienceBot/commit/5389f40588468ed7e9a30d68b40d1ffd8a2730c2))
+
+
+### 🔮 Style
+
+* added backslash ([9fbe977](https://github.com/haydenykh/SainsOrScienceBot/commit/9fbe977010e68cffcf5e3d19e2592aea38b93896))
+* added brackets to equation ([9ea4eee](https://github.com/haydenykh/SainsOrScienceBot/commit/9ea4eeeb61dd7d445a2f0f543abe39894e284843))
+* added brackets to subscript ([60d468a](https://github.com/haydenykh/SainsOrScienceBot/commit/60d468aeff8a1e42a9115bd801a3b61f91a26a48))
+* added emojis to todo list ([7d58d74](https://github.com/haydenykh/SainsOrScienceBot/commit/7d58d7425cc911f7672f45c2885801cceb935699))
+* added full stop ([2f4ce2d](https://github.com/haydenykh/SainsOrScienceBot/commit/2f4ce2d4d1d1265d2be8b824a2c973761a6b319f))
+* added links for `discord.js` and `TypeScript` & added read more text ([3ae952d](https://github.com/haydenykh/SainsOrScienceBot/commit/3ae952df7975bb51a16af92afdebf508379c9bab))
+* bolded main points ([f83329f](https://github.com/haydenykh/SainsOrScienceBot/commit/f83329fec032fb7f67e64de35759fca744c11a9b))
+* changed from full stop to colon ([115912a](https://github.com/haydenykh/SainsOrScienceBot/commit/115912aa522709705c1f05ca10a64dce49defa5e))
+* full stop ([69b0908](https://github.com/haydenykh/SainsOrScienceBot/commit/69b09081c5cadaffc037fcaab78b115fe20435ca))
+* new style changes ([3e7bb7d](https://github.com/haydenykh/SainsOrScienceBot/commit/3e7bb7d587a86cfb5648ef3d412fee5d32501933))
+
 ## [0.10.0](https://github.com/haydenykh/SainsOrScienceBot/compare/v0.9.0...v0.10.0) (2024-09-14)
 
 
