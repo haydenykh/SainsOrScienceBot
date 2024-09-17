@@ -94,4 +94,4 @@ Example:
 | 13. | Eubacteria is a prokaryote organism and has a cell wall.                                                                                                                         |    True    |
 | 14. | A single ovary may contain only one ovule.                                                                                                                                       |   False    |
 | 15. | The formula for Pascal's Principle is $P=\frac{F\_{1}}{A\_{1}}=\frac{F\_{2}}{A\_{2}}$ where $F$ is the force exerted on the piston and $A$ is the area of the piston.            |    True    |
-| 16. | The formula for Einstein's Photoelectric Equation is $W=hf\_{0}=\frac{hc}{\lambda}$                                                                                              |   False    |
+| 16. | The formula for Einstein's Photoelectric Equation is $W=hf\_{0}=\frac{hc}{\lambda}$.                                                                                             |   False    |
