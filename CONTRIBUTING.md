@@ -4,19 +4,25 @@
 
 If you are willing to contribute to this repository/project, head over to the [issues page](https://github.com/haydenykh/SainsOrScienceBot/issues).
 
-Click on the "**New issue**" button. In there, you will find two spaces that you can fill in.
+1. Click on the "**New issue**" button. In there, you will find two spaces that you can fill in.
 
-For the **title**, you can put anything you want such as **New question**, **\<A random error\>**, etc.
+2. For the **title**, you can put anything you want such as **New question**, **\<A random error\>**, etc.
 
-For the **description** box, put in what you would like to add. For instance, you'd like to add new questions to the bot. In there, put on **3** things. First, **the question**, either in Malay (Bahasa Melayu) or English or both. Second, **the choices** & **the answer** for it. Third, **the question type**. The question type can be [`objective`](#objective-type), [`structural_write`](#structural-write-type), [`structural_fitb`](#structural-fitb-type) or [`structural_tick`](#structural-tick-type). You can also provide an image (must be in `png` or `jpg` format) and a hint.
+3. For the **description** box, put in what you would like to add.
+    - For instance, you'd like to add new questions to the bot.
+        - In there, put on **3** things.
+            1. First, **the question**, either in Malay (Bahasa Melayu) or English or both.
+            2. Second, **the choices** & **the answer** for it. Third, **the question type**. The question type can be **[`objective`](#objective-type)**, **[`structural_write`](#structural-write-type)**, **[`structural_fitb`](#structural-fitb-type)** or **[`structural_tick`](#structural-tick-type)**.
+            3. You can also provide an **image**. Note that it must be in **`png`** or **`jpg`** format
+            4. **Hints** are also accepted if you have one. If not, one **might be** provided.
 
-> If you were to upload an image, please do use an image enhancer such as CamScanner to further brighten the image.
+> If you were to **upload an image**, please do use an **image enhancer** such as **CamScanner** to **further brighten the image**.
 
-You can also assign labels such as `feature`, `bug`, etc. You can leave it blank as contributors or the owner will assign it themselves.
+4. You can also assign **labels** such as `feature`, `bug`, etc. You can leave it blank as contributors or the owner will assign it themselves.
 
-Then you can submit it!
+5. Then you can **submit** it!
 
-If your issue was accepted, your name will be added to the credits section of the question embed.
+6. If your issue was **accepted**, **your username** will be added to the **credits section** of the **question embed**.
 
 ---
 
