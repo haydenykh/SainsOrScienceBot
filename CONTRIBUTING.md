@@ -79,7 +79,7 @@ Example:
 |  1. | Down syndrome has an extra chromosome in chromosome number 21.                                                                                    |  ✓  |
 |  2. | A healthy manoeuvre is caused by drowning, lightning strikes and electric shocks.                                                                 |  ✗  |
 |  3. | The solution of sodium reacting with water to produce hydrogen gas and alkaline solution is $\ce{2Na(s) + 2H\_{2}O(l) -> 2NaOH(aq) + H\_{2}(g)}$. |  ✓  |
-|  4. | Aqueous ammonium, $\ce{Ca(OH)_{2}}$ is one of the example of strong alkali.                                                                       |  ✗  |
+|  4. | Aqueous ammonium, $\ce{Ca(OH)\_{2}}$ is one of the example of strong alkali.                                                                      |  ✗  |
 |  5. | RNA structure is a single polynucleotide chain which is shorter compared to DNA.                                                                  |  ✓  |
 |  6. | Siamese twins are 2 ovum fertilised by 2 sperm.                                                                                                   |  ✗  |
 |  7. | The formula of force is the product of mass and acceleration, $F=ma$.                                                                             |  ✓  |
