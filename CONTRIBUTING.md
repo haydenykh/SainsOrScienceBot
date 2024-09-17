@@ -10,7 +10,7 @@ If you are willing to contribute to this repository/project, head over to the [i
 
 3. For the **description** box, put in what you would like to add.
     - For instance, you'd like to add new questions to the bot.
-        - In there, put on **3** things.
+        - In there, put on **3** things:
             1. First, **the question**, either in Malay (Bahasa Melayu) or English or both.
             2. Second, **the choices** & **the answer** for it. Third, **the question type**. The question type can be **[`objective`](#objective-type)**, **[`structural_write`](#structural-write-type)**, **[`structural_fitb`](#structural-fitb-type)** or **[`structural_tick`](#structural-tick-type)**.
             3. You can also provide an **image**. Note that it must be in **`png`** or **`jpg`** format
