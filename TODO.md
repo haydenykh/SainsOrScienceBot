@@ -14,16 +14,16 @@
 
 ## 🖊️ Todo
 
-1. 📓 **Notes**
-
-    : Notes are fundamental to people who are struggling with understanding the topic of the subject. Notes simplify the syllabus of your current level. They are also essential for people to search for information with ease without have to look through paragraphs of text that are all together.
-
-2. ❗️ **Help Command**
+1. ❗️ **Help Command**
 
     : A help command can help users to navigate through the list of commands available on the bot. It creates an embed with the title as the category and commands listed as different fields. It also consists of a drop-down menu to display the categories.
 
-3. 🎖️ **Point Reward/Leaderboard System**
+2. 🎖️ **Point Reward/Leaderboard System**
 
     : A point reward system can help users to use the bot even more by rewarding them artificial points. Each question they got correct they will earn a specific amount of points depending on the question difficulty. Every day, the leaderboard will be updated based on the user's performance and points amount. Although this is artificial, it definitely is a fun way to make users use the bot even more.
+
+3. 📓 **Notes**
+
+    : Notes are fundamental to people who are struggling with understanding the topic of the subject. Notes simplify the syllabus of your current level. They are also essential for people to search for information with ease without have to look through paragraphs of text that are all together.
 
 > **PS:** These are all subject to change.
