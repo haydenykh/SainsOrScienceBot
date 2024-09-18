@@ -2,13 +2,17 @@
 
 ## 🛠️ Work In Progress
 
-1. ⚖️ **Random Question Command Rework**
+1. 📖 **Dictionary**
+
+    : Dictionary can help users to search for words/phrases they don't understand or don't know the usage of.
+
+2. ⚖️ **Random Question Command Rework**
 
     : The random question command now uses a `json` file full of everything which is a big mess. Therefore, a rework is necessary. It will separate the questions into multiple different files with each question being its file. New classes, enums and interfaces will also be added to ease out the process of creating new questions.
 
     > Objective have been finished and structural types are still work in progress.
 
-2. ❓ **More Questions**
+3. ❓ **More Questions**
 
     : Creating this project is very fun and the downside is that it lacks questions. Questions are the main factors on how this bot works. Questions can be received from you guys (read the [CONTRIBUTING.md file](CONTRIBUTING.md) for more). If you already had a(n) exercise/note book about that subject, you can always write a question to the bot. It would be highly appreciated to help me fulfil the questions list.
 
