@@ -1,5 +1,6 @@
 # Changelog
 
+<<<<<<< HEAD
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
 ### [0.10.1](https://github.com/haydenykh/SainsOrScienceBot/compare/v0.10.0...v0.10.1) (2024-09-17)
@@ -427,10 +428,14 @@ All notable changes to this project will be documented in this file. See [standa
 * switched from release-it to standard-version ([55f30fa](https://github.com/haydenykh/SainsOrScienceBot/commit/55f30fa78603fb5b88aa2aa6a571da35f7900123))
 
 ### 0.0.2 (2024-08-22)
+=======
+## [0.11.0](https://github.com/haydenykh/SainsOrScienceBot/compare/v0.10.1...v0.11.0) (2024-09-17)
+>>>>>>> 6a1f0abd37047584277f4767466c9ed7cfd7fe13
 
 
 ### Features
 
+<<<<<<< HEAD
 * added changelog CI & packages ([50c6720](https://github.com/haydenykh/SainsOrScienceBot/commit/50c67204801a4da1bed61e26a65263993fa0338c))
 * installed & initialized essential packages ([7f584c3](https://github.com/haydenykh/SainsOrScienceBot/commit/7f584c3f4502795d74fe6b64520cb5b988dfab29))
 * release-it changelog action ([756a3af](https://github.com/haydenykh/SainsOrScienceBot/commit/756a3af4cd50e04d9d6395bded1c7049444410cb))
@@ -441,3 +446,6 @@ All notable changes to this project will be documented in this file. See [standa
 * moved config file ([8f2dacc](https://github.com/haydenykh/SainsOrScienceBot/commit/8f2dacc59f0d0ba58b84e4f9c4c8e724e3a7db3e))
 * updated release-it action (the 2nd time) ([b261f39](https://github.com/haydenykh/SainsOrScienceBot/commit/b261f3971e92b2c2a11545c625a5dbf054c66568))
 * updated release-it action bug ([094988f](https://github.com/haydenykh/SainsOrScienceBot/commit/094988f7960cc13751b6288c0d59566e1c7809e0))
+=======
+* uses release-please-action by googleapis ([09f9d95](https://github.com/haydenykh/SainsOrScienceBot/commit/09f9d95c00836f271534724ecf4fb75edf775958))
+>>>>>>> 6a1f0abd37047584277f4767466c9ed7cfd7fe13
