@@ -1,6 +1,6 @@
 {
     "name": "sainsorscience-bot",
-    "version": "0.11.0",
+    "version": "0.11.1",
     "description": "A bot whom provides science quizzes from Malaysia's governmental secondary schools with both Malay (Bahasa Melayu) and English support. (PROJECT IS NOT AFFILIATED WITH THE GOVERNMENT)",
     "main": "dist/index.js",
     "type": "module",

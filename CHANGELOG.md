@@ -1,7 +1,14 @@
 # Changelog
 
-<<<<<<< HEAD
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+### [0.11.1](https://github.com/haydenykh/SainsOrScienceBot/compare/v0.11.0...v0.11.1) (2024-09-18)
+
+
+### 🔧 Bug Fixes
+
+* removed usage of release-please ([f6c4c60](https://github.com/haydenykh/SainsOrScienceBot/commit/f6c4c60021f8bf305d3c973e11ae408b57ca4c6f))
+* removed usage of release-please ([86cc3e7](https://github.com/haydenykh/SainsOrScienceBot/commit/86cc3e7b891f56be14cc5a56c11bd42cb6f77cce))
 
 ### [0.10.1](https://github.com/haydenykh/SainsOrScienceBot/compare/v0.10.0...v0.10.1) (2024-09-17)
 
