@@ -61,9 +61,9 @@ export default class Handler implements IHandler {
         );
 
         files.map(async (file: string) => {
-            const command: Command | SubCommand = new (
-                await import(file)
-            ).default(this.client);
+			const commandModule = await import(file);
+			const CommandClass = commandModule.default || commandModule.Event;
+            const command: Command | SubCommand = new CommandClass(this.client);
 
             if (!command.data.name)
                 return (
