@@ -62,7 +62,10 @@ export default class Handler implements IHandler {
 
         files.map(async (file: string) => {
 			const commandModule = await import(file);
-			const CommandClass = commandModule.default || commandModule.Event;
+			const CommandClass = commandModule.default || commandModule.Command || commandModule.SubCommand;
+			if (!CommandClass || typeof CommandClass !== 'function') {
+				throw new Error(`No valid constructor found in ${file}`);
+			}
             const command: Command | SubCommand = new CommandClass(this.client);
 
             if (!command.data.name)
