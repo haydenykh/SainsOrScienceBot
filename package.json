@@ -8,7 +8,7 @@
         "clean": "rm -rf dist",
         "start": "npm run clean && npm run build && npx tsc -w & npx nodemon build | npx pino-pretty -i pid,hostname -t 'yyyy-mm-dd HH:MM:ss'",
         "startNoClean": "npm run build && npx tsc -w & npx nodemon build | npx pino-pretty -i pid,hostname -t 'yyyy-mm-dd HH:MM:ss'",
-		"startRender": "node .",
+        "startRender": "node .",
         "build": "npx tsc --build",
         "release": "npx standard-version"
     },
@@ -30,6 +30,7 @@
     "homepage": "https://github.com/haydenykh/SainsOrScienceBot#readme",
     "devDependencies": {
         "@eslint/js": "^9.11.0",
+        "@types/express": "^5.0.0",
         "@types/node": "^22.7.4",
         "eslint": "^9.11.1",
         "globals": "^15.9.0",
@@ -43,6 +44,7 @@
         "chalk": "^5.3.0",
         "discord.js": "^14.16.3",
         "dotenv": "^16.4.5",
+        "express": "^4.21.0",
         "glob": "^11.0.0",
         "pino": "^9.4.0",
         "pino-pretty": "^11.2.2"
