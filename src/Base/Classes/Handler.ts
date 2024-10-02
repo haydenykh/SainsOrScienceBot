@@ -24,8 +24,9 @@ export default class Handler implements IHandler {
         );
 
         files.map(async (file: string) => {
-			const { Event } = await import(file);
-            const event: Event = new Event(this.client);
+			const eventModule = await import(file);
+			const EventClass = eventModule.default || eventModule.Event;
+            const event: Event = new EventClass(this.client);
 
             if (!event.name)
                 return (
