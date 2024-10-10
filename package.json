@@ -6,8 +6,8 @@
     "type": "module",
     "scripts": {
         "clean": "rm -rf dist",
-        "start": "npm run clean && npm run build && npx tsc -w & npx nodemon build | npx pino-pretty -i pid,hostname -t 'yyyy-mm-dd HH:MM:ss'",
-        "startNoClean": "npm run build && npx tsc -w & npx nodemon build | npx pino-pretty -i pid,hostname -t 'yyyy-mm-dd HH:MM:ss'",
+        "start": "npm run clean && npm run build && npx tsc -w & nodemon build | npx pino-pretty -i pid,hostname -t 'yyyy-mm-dd HH:MM:ss'",
+        "startNoClean": "npm run build && npx tsc -w & nodemon build | npx pino-pretty -i pid,hostname -t 'yyyy-mm-dd HH:MM:ss'",
         "build": "npx tsc --build",
         "release": "npx commit-and-tag-version"
     },
@@ -45,6 +45,7 @@
         "dotenv": "^16.4.5",
         "express": "^4.21.0",
         "glob": "^11.0.0",
+        "moment": "^2.30.1",
         "pino": "^9.4.0",
         "pino-pretty": "^11.2.2"
     }
