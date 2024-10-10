@@ -98,9 +98,11 @@ export default class RandomQuestionCommand extends Command {
                 .setStyle(ButtonStyle.Secondary)
         );
 
+        let reply;
+
         const userId = user.id;
         if (this.activeCollectors.has(userId)) {
-            await interaction.reply({
+            reply = await interaction.reply({
                 content: `I am trying to process the interaction. Please rerun the command.`,
                 ephemeral: true,
             });
@@ -110,9 +112,7 @@ export default class RandomQuestionCommand extends Command {
 
             return;
         }
-
-        let reply;
-
+		
         if (!(level == Level.Form4 || level == Level.Form5)) {
             if (!(subject == Subject.Science || subject == Subject.Geography)) {
                 reply = await interaction.reply({
