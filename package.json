@@ -30,7 +30,7 @@
     "devDependencies": {
         "@eslint/js": "^9.14.0",
         "@types/express": "^5.0.0",
-        "@types/node": "^22.9.0",
+        "@types/node": "^22.10.1",
         "commit-and-tag-version": "^12.5.0",
         "eslint": "^9.16.0",
         "globals": "^15.13.0",
